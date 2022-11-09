@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      h4{
+        color: rgba(63,63,70);
+        text-align: left;
+        font-family: "Open Sans",sans-serif;
+        font-size: 28px;
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+
+      <nav class="navbar">
+          <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+          <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+          </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+          <div id="account-btn"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Teknik pada Machine Learning</h3>
+      <p> <a href="frontenddeveloper.html">Course</a> / Front-End Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+            <h4>1. Supervised Learning</h4>
+            <p>Pembelajaran yang diawasi berlaku ketika mesin memiliki data sampel, yaitu data input dan output dengan label yang benar. Label yang benar digunakan untuk memeriksa kebenaran model menggunakan beberapa label dan tag. Teknik pembelajaran yang diawasi membantu kita untuk memprediksi peristiwa masa depan dengan bantuan pengalaman masa lalu dan contoh yang diberi label. Awalnya, ia menganalisis dataset pelatihan yang diketahui, dan kemudian memperkenalkan fungsi yang disimpulkan yang membuat prediksi tentang nilai output. Selanjutnya, ia juga memprediksi kesalahan selama seluruh proses pembelajaran ini dan juga memperbaiki kesalahan tersebut melalui algoritma.
+
+                Contoh: Anggaplah kita memiliki sekumpulan gambar yang ditandai sebagai ''anjing''. Algoritma pembelajaran mesin dilatih dengan gambar anjing ini sehingga dapat dengan mudah membedakan apakah suatu gambar adalah anjing atau bukan.</p>
+
+                <h4>2. Unsupervised Learning</h4>
+                <p>Dalam pembelajaran tanpa pengawasan, mesin dilatih dengan beberapa sampel atau label input saja, sedangkan outputnya tidak diketahui. Informasi pelatihan tidak diklasifikasikan atau diberi label; karenanya, mesin mungkin tidak selalu memberikan output yang benar dibandingkan dengan pembelajaran yang diawasi.</p>
+                <p>Meskipun pembelajaran tanpa pengawasan kurang umum dalam pengaturan bisnis praktis, ini membantu dalam mengeksplorasi data dan dapat menarik kesimpulan dari kumpulan data untuk menggambarkan struktur tersembunyi dari data yang tidak berlabel.</p>
+                <p>Contoh: Mari kita asumsikan sebuah mesin dilatih dengan beberapa kumpulan dokumen yang memiliki kategori berbeda (Tipe A, B, dan C), dan kita harus mengaturnya ke dalam kelompok yang sesuai. Karena mesin hanya dilengkapi dengan sampel input atau tanpa output, maka mesin dapat mengatur kumpulan data ini ke dalam kategori tipe A, tipe B, dan tipe C, tetapi tidak perlu diatur dengan benar atau tidak.</p>
+
+                <h4>3. Reinforcement Learning</h4>
+                <p> Reinforcement Learning adalah teknik pembelajaran mesin berbasis umpan balik. Dalam jenis pembelajaran seperti itu, agen (program komputer) perlu menjelajahi lingkungan, melakukan tindakan, dan atas dasar tindakan mereka, mereka mendapatkan imbalan sebagai umpan balik. Untuk setiap tindakan baik, mereka mendapatkan hadiah positif, dan untuk setiap tindakan buruk, mereka mendapatkan hadiah negatif. Tujuan agen pembelajaran Penguatan adalah untuk memaksimalkan imbalan positif. Karena tidak ada data berlabel, agen terikat untuk belajar dari pengalamannya saja.</p>
+
+                <h4>4. Semi-supervised Learning</h4>
+                <p>Semi-supervised Learning 
+                    adalah teknik perantara dari kedua pembelajaran terawasi dan tidak terawasi. Ini melakukan tindakan pada kumpulan data yang memiliki sedikit label serta data yang tidak berlabel. Namun, umumnya berisi data yang tidak berlabel. Oleh karena itu, ini juga mengurangi biaya model pembelajaran mesin karena label mahal, tetapi untuk tujuan perusahaan, mungkin hanya memiliki sedikit label. Selanjutnya, ini juga meningkatkan akurasi dan kinerja model pembelajaran mesin.</p>
+    <p>Pembelajaran semi-diawasi membantu ilmuwan data untuk mengatasi kelemahan pembelajaran yang diawasi dan tidak diawasi. Analisis ucapan, klasifikasi konten web, klasifikasi urutan protein, pengklasifikasi dokumen teks., dll., Adalah beberapa aplikasi penting dari pembelajaran semi-diawasi.
+    </p>    
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="before">
+            <a href=""class="steps-link gc-analytics-event"  data-action="Previous step" >  
+              <div class="steps-link-direction">Previous</div>
+            </a>
+          </div>
+        <div class="next">
+          <a href="modulmachL2(1).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+              
+              <div class="steps-link-direction">Next</div>
+            </a>
+          </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

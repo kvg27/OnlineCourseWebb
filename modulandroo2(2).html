@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+   <body>
+   
+      <!-- header section starts  -->
+      <header class="header">
+         <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+         <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+               <a href="home.html">Home</a>
+            <div class="dropdown">
+               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                  <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+               </a> 
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                  <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                  <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                  <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                  <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+               </div>
+            </div>
+               <a href="testimonial.html">Testimoni</a>
+               <a href="blog.html">Blogs</a>
+               <a href="contact.html">Contact</a>
+               <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+               <a type="btn" href="signin.html">Sign In</a>
+         </nav>
+         <div class="overlay" data-nav-toggler data-overlay></div>
+
+         <div class="icons">
+            <div id="account-btn"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+         </div>
+      </header>
+      <!-- header section ends -->
+
+      <section class="heading-link">
+         <h3>Resource XML Kompleks Inline</h3>
+         <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula </p>
+      </section>
+
+      <!-- modul course section starts  -->
+      <div class="main">
+         <div class="container">
+            
+            <p>Jenis resource tertentu merupakan komposisi dari beberapa resource kompleks yang direpresentasikan oleh file XML. Salah satu contohnya adalah animasi drawable vektor, yaitu resource yang dapat digambar yang merangkum drawable vektor dan animasi. Jenis ini memerlukan penggunaan minimal tiga file XML.</p>
+            <pre class="lang-xml" translate="no" dir="ltr" is-upgraded=""><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln"><br></span><span class="tag">&lt;animated-vector</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/res/android"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:drawable</span><span class="pun">=</span><span class="atv">"@drawable/vectordrawable"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;target</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"rotationGroup"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:animation</span><span class="pun">=</span><span class="atv">"@anim/rotation"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/animated-vector&gt;</span><span class="pln"><br></span></pre>
+            <dt><code translate="no" dir="ltr">res/drawable/vectordrawable.xml</code></dt>
+            <dd>
+                  <devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button></div><pre class="lang-xml" translate="no" dir="ltr" is-upgraded=""><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln"><br></span><span class="tag">&lt;vector</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/res/android"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:height</span><span class="pun">=</span><span class="atv">"64dp"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:width</span><span class="pun">=</span><span class="atv">"64dp"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:viewportHeight</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:viewportWidth</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br> &nbsp; </span><span class="tag">&lt;group</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"rotationGroup"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pivotX</span><span class="pun">=</span><span class="atv">"300.0"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pivotY</span><span class="pun">=</span><span class="atv">"300.0"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:rotation</span><span class="pun">=</span><span class="atv">"45.0"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;path</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:fillColor</span><span class="pun">=</span><span class="atv">"#000000"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pathData</span><span class="pun">=</span><span class="atv">"M300,70 l 0,-70 70,70 0,0 -70,70z"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br> &nbsp; </span><span class="tag">&lt;/group&gt;</span><span class="pln"><br></span><span class="tag">&lt;/vector&gt;</span><span class="pln"><br></span></pre></devsite-code>
+                  </dd>
+                  <dt><code translate="no" dir="ltr">res/anim/rotation.xml</code></dt>
+                  <dd>
+                     <devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button></div><pre class="lang-xml" translate="no" dir="ltr" is-upgraded=""><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln"><br></span><span class="tag">&lt;objectAnimator</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/android"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:duration</span><span class="pun">=</span><span class="atv">"6000"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:propertyName</span><span class="pun">=</span><span class="atv">"rotation"</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="atn">android:valueFrom</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"><br> &nbsp; </span><span class="atn">android:valueTo</span><span class="pun">=</span><span class="atv">"360"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span></pre></devsite-code>
+                     </dd>
+                     <p>Ada banyak file yang dibutuhkan untuk membuat satu animasi drawable vektor.
+                        Jika vektor drawable dan animasi digunakan ulang di tempat lain, cara ini adalah yang paling tepat untuk menerapkan
+                        animasi vektor drawable. Jika hanya akan digunakan untuk animasi vektor drawable ini, ada
+                        cara yang lebih sederhana untuk menerapkannya.</p>
+                        <p>Menggunakan format resource inline AAPT, Anda dapat menentukan ketiga resource dalam file XML yang sama.
+                              Karena kita akan membuat animasi vektor drawable, sertakan file dalam <code translate="no" dir="ltr">res/drawable/</code>.</p>
+                           
+                              
+                              <dl>
+
+                                 <dt><code translate="no" dir="ltr">res/drawable/avd.xml</code></dt>
+                                 <dd>
+                                 <devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button></div><pre class="lang-xml devsite-code-highlight" translate="no" dir="ltr" is-upgraded=""><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">?&gt;</span><span class="pln"><br></span><span class="tag">&lt;animated-vector</span><span class="pln"> </span><span class="atn">xmlns:android</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/apk/res/android"</span><span class="pln"><br>&nbsp; &nbsp; </span><strong><span class="atn">xmlns:aapt</span><span class="pun">=</span><span class="atv">"http://schemas.android.com/aapt"</span></strong><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><strong><span class="tag">&lt;aapt:attr</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"android:drawable"</span><span class="pln"> </span><span class="tag">&gt;</span></strong><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;vector</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:height</span><span class="pun">=</span><span class="atv">"64dp"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:width</span><span class="pun">=</span><span class="atv">"64dp"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:viewportHeight</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:viewportWidth</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;group</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"rotationGroup"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pivotX</span><span class="pun">=</span><span class="atv">"300.0"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pivotY</span><span class="pun">=</span><span class="atv">"300.0"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:rotation</span><span class="pun">=</span><span class="atv">"45.0"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;path</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:fillColor</span><span class="pun">=</span><span class="atv">"#000000"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:pathData</span><span class="pun">=</span><span class="atv">"M300,70 l 0,-70 70,70 0,0 -70,70z"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;/group&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;/vector&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><strong><span class="tag">&lt;/aapt:attr&gt;</span></strong><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="tag">&lt;target</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"rotationGroup"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><strong><span class="tag">&lt;aapt:attr</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"android:animation"</span><span class="pln"> </span><span class="tag">&gt;</span></strong><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;objectAnimator</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:duration</span><span class="pun">=</span><span class="atv">"6000"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:propertyName</span><span class="pun">=</span><span class="atv">"rotation"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:valueFrom</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"><br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">android:valueTo</span><span class="pun">=</span><span class="atv">"360"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><strong><span class="tag">&lt;/aapt:attr&gt;</span></strong><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;/target&gt;</span><span class="pln"><br></span><span class="tag">&lt;/animated-vector&gt;</span><span class="pln"><br></span></pre></devsite-code>
+                                 </dd>
+                                 
+                                 </dl>
+                                 <p>Tag XML <code translate="no" dir="ltr">&lt;aapt:attr &gt;</code> memberi tahu AAPT bahwa turunan tag harus diperlakukan sebagai
+                                    resource dan diekstrak ke file resource-nya sendiri. Nilai dalam nama atribut menentukan tempat
+                                    untuk menggunakan resource inline dalam tag induk.</p>
+
+
+                                    <p>AAPT akan membuat file resource dan nama untuk semua resource inline.
+                                          Aplikasi yang di-build menggunakan format inline ini kompatibel dengan semua versi Android.</p>
+         </div></div>
+         <div class="navbar">
+            <div class="before">
+                  <a href="modulandroo1(2).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+                  <div class="steps-link-direction">Previous</div>
+                  </a>
+               </div>
+            <div class="next">
+               <a href="modulandroo1(3).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+                  
+                  <div class="steps-link-direction">Next</div>
+                  </a>
+               </div>
+         </div>
+         
+         </div>
+         </div>
+         </div>
+
+      <!-- modul course section starts  -->
+      
+      <!-- swiper js link  -->
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+      <!-- droppdown js link  -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+      <!-- custom js file link  -->
+      <script src="js/script.js"></script>
+
+   </body>
+</html>

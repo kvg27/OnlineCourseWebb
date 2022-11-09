@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+  <body>
+      
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+          <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+          <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+          </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+          <div id="account-btn"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Menjalankan Aplikasi</h3>
+      <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+      <p>Di tutorial sebelumnya, Anda membuat aplikasi Android yang menampilkan tulisan "Hello, World!" ("Halo Dunia!") Kini, Anda dapat menjalankan aplikasi tersebut di perangkat sungguhan atau emulator.</p>
+      
+      <h2>Menjalankan di perangkat sungguhan</h2>
+      <p> Persiapkan perangkat Anda sebagai berikut:</p>
+      <ol>
+        <li>Hubungkan perangkat Anda ke mesin pengembangan dengan kabel USB. Jika melakukan pengembangan di Windows, Anda mungkin perlu menginstal driver USB yang sesuai untuk perangkat Anda.</li>
+        <br>
+        <li>Lakukan langkah-langkah berikut untuk mengaktifkan <strong>proses debug USB</strong> di jendela <strong>Opsi developer</strong>:</li>
+        <br>
+        <ul> 
+            <br>
+            <li>Buka aplikasi <strong>Setelan</strong>.</li>
+            <br>
+          <li> Jika perangkat Anda menggunakan Android v8.0 atau lebih tinggi, pilih <strong>Sistem</strong>.Jika tidak, lanjutkan ke langkah berikutnya.</li>
+          <br>
+          <li>Scroll ke bagian bawah, lalu pilih <strong>Tentang ponsel</strong>.</li>
+          <br>
+            <li> Pilih <strong>Java</strong> atau <strong>Kotlin</strong> dari menu drop-down <strong>Language</strong>.</li>
+            <br>
+          <li> Scroll ke bagian bawah, lalu ketuk <strong>Nomor build</strong>tujuh kali.</li>
+          <br>
+          <li>Kembali ke layar sebelumnya, scroll ke bagian bawah, dan ketuk<strong>Opsi developer</strong>.</li>
+          <br>
+          <li> Di jendela<strong>Opsi developer</strong>, scroll ke bawah untuk menemukan dan mengaktifkan <strong> proses debug USB</strong>.</li>
+        </ul>
+      </ol>
+      <br>
+      <p> Jalankan aplikasi di perangkat Anda sebagai berikut:</p>
+      <ol>
+        <li>
+            Di Android Studio, pilih aplikasi Anda dari menu drop-down konfigurasi run/debug di toolbar.
+        </li><br>
+        <li>Di toolbar, pilih perangkat tempat Anda ingin menjalankan aplikasi dari menu drop-down perangkat target.</li>
+        <img src="https://developer.android.com/static/studio/images/run/deploy-run-app.png?hl=id">
+      </ol>
+
+      <ol>
+        <li>
+            Klik <strong>Run</strong></li>
+            <p>Android Studio akan menginstal aplikasi Anda di perangkat yang terhubung dan menjalankannya. Setelah itu, Anda akan melihat "Hello, World!" ("Halo Dunia!") ditampilkan dalam aplikasi pada perangkat Anda.</p>
+      </ol>
+
+      <h2>Menjalankan aplikasi di emulator</h2>
+      <p>Jalankan aplikasi di emulator seperti berikut:</p>
+      <ol>
+        <li>Di Android Studio, buat Perangkat Virtual Android (AVD) yang dapat digunakan emulator untuk menginstal dan menjalankan aplikasi Anda.</li><br>
+        <li>Di toolbar, pilih aplikasi Anda dari menu drop-down konfigurasi run/debug.</li><br>
+        <li>Dari menu drop-down perangkat target, pilih AVD tempat Anda ingin menjalankan aplikasi.
+            <img src="https://developer.android.com/static/studio/images/run/deploy-run-app.png?hl=id"></li><br>
+            <li>Klik <strong>Run</strong> 
+            <p>Android Studio akan menginstal aplikasi di AVD dan menjalankan emulator. Setelah itu, Anda akan melihat tulisan "Hello, World!" ("Halo Dunia!") ditampilkan dalam aplikasi.</p></li>
+      </ol>
+      <p>Untuk mulai mengembangkan aplikasi, lanjutkan ke tutorial berikutnya.</p>
+        </div></div>
+
+        <div class="navbar">
+            <div class="before">
+                <a href="modulandroo1(1).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+                  <div class="steps-link-direction">Previous</div>
+                </a>
+              </div>
+            <div class="next">
+              <a href="modulandroo3(1).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+                  
+                  <div class="steps-link-direction">Next</div>
+                </a>
+              </div>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

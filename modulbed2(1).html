@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      h4{
+        color: rgba(63,63,70);
+        text-align: left;
+        font-family: "Open Sans",sans-serif;
+        font-size: 28px;
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+          <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+          <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+          </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+          <div id="account-btn"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Developer Tools</h3>
+      <p> <a href="backenddeveloper.html">Course</a> / Back-End Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+              <h4>Cara Memakai AWS</h4>
+              <p>When infrastructure becomes virtual, as with cloud computing, the way developers work with infrastructure changes slightly. Instead of physically managing infrastructure, you logically manage it, through the AWS Application Programming Interface (AWS API). When you create, delete, or change any AWS resource, you will use API calls to AWS to do that.</p>
+              <ul> 
+                <li><span style="font-family: Symbol;"><span><span style="font: 7.0ptTimes New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>The AWS Management Console</li> 
+                <li><span style="font-family: Symbol;"><span><span style="font: 7.0pt Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>The AWS Command Line Interface (AWS CLI)</li> 
+                <li><span style="font-family: Symbol;"><span>&nbsp;&nbsp;<span style="font: 7.0pt Times New Roman"> &nbsp;&nbsp;&nbsp; </span></span></span>IDE and IDE toolkits</li> 
+                <li><span style="font-family: Symbol;"><span><span style="font: 7.0pt Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>AWS Software Development Kits (SDKs)<span class="MsoCommentReference"><span style="font-size: 8.0pt; line-height: 107.0%;"><span></span></span></span></li> 
+              </ul>
+              <p><h4>AWS Console</h4></p>
+              <p>Saat pertama kali memulai dengan AWS, orang sering memulai dengan AWS Management Console, konsol berbasis web yang Anda masuki melalui browser. Konsol terdiri dari kumpulan luas konsol layanan untuk mengelola sumber daya AWS. Dengan bekerja di konsol, Anda tidak perlu khawatir tentang skrip atau sintaks. Anda juga dapat memilih Wilayah tertentu yang Anda inginkan untuk layanan AWS.
+            </p>
+            <p>Setelah bekerja di konsol, Anda mungkin ingin beralih dari penerapan layanan AWS secara manual, mungkin karena Anda telah menjadi lebih akrab dengan AWS atau bekerja di lingkungan produksi yang memerlukan tingkat manajemen risiko. Di sinilah AWS Command Line Interface (CLI) masuk.</p>
+
+            <p><h4>AWS CLI</h4></p>
+            <p>AWS CLI adalah alat sumber terbuka yang memungkinkan Anda membuat dan mengonfigurasi layanan AWS menggunakan perintah di shell baris perintah Anda. Anda dapat menjalankan perintah di Linux atau macOS menggunakan program shell umum seperti bash, zsh, dan tcsh, atau di Windows, di prompt perintah Windows atau di PowerShell. Salah satu opsi untuk memulai dan menjalankan dengan cepat dengan AWS CLI adalah AWS CloudShell, shell berbasis browser yang menyediakan akses baris perintah ke sumber daya AWS. CloudShell sudah diautentikasi sebelumnya dengan kredensial konsol Anda. Alat pengembangan dan operasi umum sudah diinstal sebelumnya, jadi tidak diperlukan instalasi atau konfigurasi lokal.</p>
+            <p>Dengan pindah ke AWS CLI, Anda dapat membuat skrip atau memprogram panggilan API. Alih-alih menggunakan GUI, Anda membuat perintah menggunakan sintaks AWS yang ditentukan. Salah satu manfaat CLI adalah Anda dapat membuat satu perintah untuk membuat beberapa sumber daya AWS, yang dapat membantu mengurangi kemungkinan kesalahan manusia saat memilih dan mengonfigurasi sumber daya. Dengan CLI, Anda perlu mempelajari sintaks yang tepat untuk membentuk perintah, tetapi saat Anda membuat skrip perintah ini, Anda membuatnya dapat diulang. Ini akan menghemat waktu Anda dalam jangka panjang.</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="before">
+            <a href="modulbed1(1).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+              <div class="steps-link-direction">Previous</div>
+            </a>
+          </div>
+        <div class="next">
+          <a href="modulbed3(1).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+              
+              <div class="steps-link-direction">Next</div>
+            </a>
+          </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

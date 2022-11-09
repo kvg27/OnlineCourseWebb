@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+        <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="androidev.html">Android Developer</a>
+              <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+              <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+              <a class="dropdown-item" href="machine.html">Machine Learning</a>
+              <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+        </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+        <div id="account-btn"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Dukungan Unicode dan Peng-Internasionalan</h3>
+      <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+      <div class="container">
+
+        <p>Android memanfaatkan
+          <a class="external-link" href="http://site.icu-project.org/">library ICU</a>
+          dan <a class="external-link" href="http://cldr.unicode.org/">project CLDR</a>
+          untuk menyediakan dukungan Unicode dan internasionalisasi
+          lainnya. Pembahasan dokumen ini mengenai dukungan Unicode dan internasionalisasi dibagi menjadi
+          dua: Android 6.0 (API level 23) ke bawah, dan Android 7.0 (API level 24) ke atas.
+        </p>
+        <h2>Dukungan Unicode dan internasionalisasi hingga Android 6.0 (API level 23)</h2>
+        <p>
+          Platform Android menggunakan ICU dan CLDR untuk menerapkan berbagai class guna menangani ortografi Latin dan non-Latin, mengekspos class seperti <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/java/util/Locale?hl=id">Locale</a></code>, <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/java/lang/Character?hl=id">Character</a></code>, dan berbagai subclass <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/java/text/package-summary?hl=id">java.text</a></code>. Aplikasi yang memerlukan fungsi internasionalisasi di luar
+          class yang diekspos, dan menargetkan versi platform hingga Android 6.0
+          (API level 23), harus menyertakan library ICU.
+        </p>
+
+        <h3>Pembuatan Versi</h3>
+          <p>
+            Setiap rilis platform Android baru disertai dengan versi ICU yang lebih baru (serta versi CLDR dan Unicode yang terkait). Tabel 1 menunjukkan keterkaitan ini
+            hingga Android 6.0 (API level 23).
+          </p>
+          <div class="devsite-table-wrapper">
+            <table>
+              <tbody><tr>
+                <th>Platform (level API)</th>
+                <th>ICU</th>
+                <th>CLDR</th>
+                <th>Unicode</th>
+                </tr>
+                <tr>
+                <td>Android 1.5–2.0 (API level 3–7)</td>
+                <td>3.8</td>
+                <td>1.5</td>
+                <td>5.0</td>
+                </tr>
+                <tr>
+                <td>Android 2.2 (API level 8)</td>
+                <td>4.2</td>
+                <td>1.7</td>
+                <td>5.1</td>
+                </tr>
+                <tr>
+                <td>Android 2.3–3.0 (API level 9–13)</td>
+                <td>4.4</td>
+                <td>1.8</td>
+                <td>5.2</td>
+                </tr>
+                <tr>
+                <td>Android 4.0 (API level 14–15)</td>
+                <td>4.6</td>
+                <td>1.9</td>
+                <td>6.0</td>
+                </tr>
+                <tr>
+                <td>Android 4.1 (API level 16–17)</td>
+                <td>4.8</td>
+                <td>2.0</td>
+                <td>6.0</td>
+                </tr>
+                <tr>
+                <td>Android 4.3 (API level 18)</td>
+                <td>50</td>
+                <td>22.1</td>
+                <td>6.2</td>
+                </tr>
+                <tr>
+                <td>Android 4.4 (API level 19–20)</td>
+                <td>51</td>
+                <td>23</td>
+                <td>6.2</td>
+                </tr>
+                <tr>
+                <td>Android 5.0 (API level 21–22)</td>
+                <td>53</td>
+                <td>25</td>
+                <td>6.3</td>
+                </tr>
+                <tr>
+                <td>Android 6.0 (API level 23)</td>
+                <td>55.1</td>
+                <td>27.0.1</td>
+                <td>7.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+              <p>
+                Aplikasi yang menargetkan Android 7.0 (API level 24) atau yang lebih baru dapat memanfaatkan dukungan yang lebih lengkap untuk Unicode dan internasionalisasi yang diekspos oleh framework Android.
+                Bagian dokumen berikutnya menguraikan detail tentang dukungan tersebut.
+              </p>
+              <p>
+                Aplikasi yang menargetkan Android 7.0 (API level 24) atau yang lebih baru dapat memanfaatkan dukungan yang lebih lengkap untuk Unicode dan internasionalisasi yang diekspos oleh framework Android.
+                Bagian dokumen berikutnya menguraikan detail tentang dukungan tersebut.
+              </p>
+
+              <h2>Dukungan Unicode dan internasionalisasi di Android 7.0 (API level 24) dan yang lebih tinggi</h2>
+              <p>
+                Dimulai dari Android 7.0 (API level 24), platform Android
+                mengekspos subset ICU4J API yang dapat digunakan oleh developer aplikasi
+                dalam paket <code translate="no" dir="ltr">android.icu</code>.
+                ICU4J adalah set library Java open source yang banyak digunakan, serta menyediakan dukungan Unicode
+                dan internasionalisasi untuk aplikasi perangkat lunak.
+              </p>
+              <p>ICU4J API menggunakan
+                data pelokalan yang ada di perangkat. Hasilnya, Anda dapat mengurangi jejak aplikasi
+                Anda dengan tidak mengompilasi library ICU4J ke aplikasi Anda; Anda dapat
+                memanggil mereka dalam framework. (Dalam hal ini, Anda mungkin perlu menyediakan
+                <a href="https://developer.android.com/google/play/publishing/multiple-apks?hl=id">beberapa versi
+                APK</a> agar pengguna yang menjalankan versi Android di bawah
+                Android 7.0 (API level 24)
+                dapat mendownload versi aplikasi yang berisi library ICU4J.)
+              </p>
+              <p>
+                Dokumen ini dimulai dengan beberapa informasi dasar tentang level minimum
+                Android API yang diperlukan untuk mendukung library ini. Dokumen ini kemudian menjelaskan semua
+                yang perlu Anda ketahui tentang penerapan ICU4J spesifik Android. Terakhir,
+                dokumen ini memberi tahu Anda cara menggunakan ICU4J API dalam framework Android.
+              </p>
+              <h3>ICU4J di Android</h3>
+              <p>
+                Android mengekspos subset ICU4J API melalui
+                paket <code translate="no" dir="ltr">android.icu</code>, bukan <code translate="no" dir="ltr">com.ibm.icu</code>. Framework
+                Android mungkin memilih untuk tidak
+                mengekspos ICU4J API karena berbagai alasan: misalnya, karena API sudah tidak digunakan lagi
+                atau tidak dideklarasikan sebagai stabil. Apabila tim ICU menghentikan API di masa mendatang,
+                Android juga akan menandainya sebagai tidak digunakan lagi, tetapi akan terus menyertakannya.
+              </p>
+              <p>Berikut beberapa hal penting yang perlu diperhatikan:</p>
+              <ul>
+                <li>API framework Android ICU4J tidak menyertakan semua ICU4J API.</li>
+                <li>API dalam framework Android tidak menggantikan dukungan Android untuk <a href="https://developer.android.com/guide/topics/resources/localization?hl=id">melakukan pelokalan dengan resource</a>.</li>
+                <li>Dalam beberapa situasi, framework Android mendukung lebih banyak karakter daripada library ICU. Hal ini benar, misalnya, untuk dukungan emoji dari class <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/android/text/package-summary?hl=id">android.text</a></code>.</li>              
+              </ul>
+
+              <h3>Melakukan migrasi ke paket android.icu dari com.ibm.icu</h3>
+              <p>
+                Jika sudah menggunakan ICU4J API dalam aplikasi, dan
+                <code translate="no" dir="ltr">android.icu</code> API dapat memenuhi persyaratan Anda, melakukan migrasi ke
+                API framework tersebut akan mengharuskan Anda mengubah impor Java
+                dari <code translate="no" dir="ltr">com.ibm.icu</code> ke <code translate="no" dir="ltr">android.icu</code>. Anda kemudian dapat
+                menghapus salinan file ICU4J milik sendiri dari APK.
+              </p>
+              <h3>Melakukan migrasi ke android.icu API dari Android SDK API lain</h3>
+              <p>
+                Beberapa class dalam paket <code translate="no" dir="ltr">java</code> dan <code translate="no" dir="ltr">android</code> memiliki
+                padanan dengan yang ada dalam ICU4J. Namun, ICU4J biasanya memberikan dukungan
+                yang lebih luas untuk standar dan bahasa.
+              </p>
+              <p>Tabel 2 menunjukkan beberapa contoh padanan ini untuk membantu Anda memulai:</p>
+              <div class="devsite-table-wrapper">
+                <table>
+                  <tbody><tr>
+                    <th>Class</th>
+                    <th>Alternatif</th>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">java.<wbr>lang.<wbr>Character</code> </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>lang.<wbr>UCharacter</code> </td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">java.<wbr>text.<wbr>BreakIterator</code> </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>BreakIterator</code> </td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">java.<wbr>text.<wbr>DecimalFormat</code> </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>DecimalFormat</code> </td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">java.<wbr>util.<wbr>Calendar</code></td>
+                    <td>
+                    <code translate="no" dir="ltr">android.<wbr>icu.<wbr>util.<wbr>Calendar</code></td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">android.<wbr>text.<wbr>BidiFormatter</code>
+                    </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>Bidi</code>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">android.<wbr>text.<wbr>format.<wbr>DateFormat</code>
+                    </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>DateFormat</code>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><code translate="no" dir="ltr">android.<wbr>text.<wbr>format.<wbr>DateUtils</code> </td>
+                    <td><code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>DateFormat</code>
+                    <code translate="no" dir="ltr">android.<wbr>icu.<wbr>text.<wbr>RelativeDateTimeFormatter</code>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3>ICU4C di Android</h3>
+              <p>Android mengekspos subset ICU4C API melalui library libicu.so, bukan libicuuc.so atau libicui18n.so. API ini tersedia mulai dari Android 12 (API level 31). Header NDK tersedia mulai dari rilis NDK r22b. Tidak ada API C++ yang terekspos melalui Android NDK. Beberapa API C belum tersedia.</p>
+
+              <h3>Pembuatan versi</h3>
+              <p>Setiap rilis platform Android baru disertai dengan versi ICU yang lebih baru (serta versi CLDR dan Unicode yang terkait). Tabel 3 menunjukkan keterkaitan ini dimulai dari Android 7.0 (API level 24).</p>
+              <div class="devsite-table-wrapper">
+                <table>
+                  <tbody><tr>
+                    <th>Platform (level API)</th>
+                    <th>ICU</th>
+                    <th>CLDR</th>
+                    <th>Unicode</th>
+                    </tr>
+                    <tr>
+                    <td>Android 7.0 - 7.1 (API level 24 - 25)</td>
+                    <td>56</td>
+                    <td>28</td>
+                    <td>8.0</td>
+                    </tr>
+                    <tr>
+                    <td>Android 8.0 - 8.1 (API level 26 - 27)</td>
+                    <td>58.2</td>
+                    <td>30.0.3</td>
+                    <td>9.0</td>
+                    </tr>
+                    <tr>
+                    <td>Android 9 (API level 28)</td>
+                    <td>60.2</td>
+                    <td>32.0.1</td>
+                    <td>10.0</td>
+                    </tr>
+                    <tr>
+                    <td>Android 10 (API level 29)</td>
+                    <td>63.2</td>
+                    <td>34</td>
+                    <td>11.0</td>
+                    </tr>
+                    <tr>
+                    <td>Android 11 (API level 30)</td>
+                    <td>66.1</td>
+                    <td>36</td>
+                    <td>13.0</td>
+                    </tr>
+                    <tr>
+                    <td>Android 12 (API level 31)</td>
+                    <td>68.2</td>
+                    <td>38.1</td>
+                    <td>13.0</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3>Setelan format waktu 24 jam/12 jam</h3>
+                                        
+              <p>ICU di Android tidak mengikuti setelan format waktu 24 jam/12 jam yang ditetapkan pengguna (diperoleh dari <a href="https://developer.android.com/reference/android/text/format/DateFormat?hl=id#is24HourFormat(android.content.Context)">
+              <code translate="no" dir="ltr">DateFormat.is24HourFormat()</code></a> ). Untuk mengikuti setelan ini, gunakan metode pemformatan waktu
+              <a href="https://developer.android.com/reference/android/text/format/DateFormat?hl=id"><code translate="no" dir="ltr">DateFormat</code></a> atau <a href="https://developer.android.com/reference/android/text/format/DateUtils?hl=id"><code translate="no" dir="ltr">DateUtils</code></a>
+            
+              atau gunakan pola pemformatan waktu ICU dengan simbol pola jam yang
+              sesuai ('h' untuk 12 jam, 'H' untuk 24 jam) untuk nilai hasil <code translate="no" dir="ltr">is24HourFormat()</code>
+              yang berbeda.
+              Misalnya, kode berikut akan menghasilkan string dengan waktu saat ini yang mengikuti setelan 12 jam/24 jam pengguna:
+
+          <div>
+            <devsite-selector scope="auto" active="kotlin" ready=""><devsite-tabs role="tablist" connected=""><div class="devsite-tabs-wrapper"><tab role="tab" aria-selected="true" aria-controls="tabpanel-kotlin" tab="kotlin" id="kotlin" active=""><a id="aria-tab-kotlin" role="button" href="#kotlin" aria-selected="true">Kotlin</a></tab><tab role="tab" aria-selected="false" aria-controls="tabpanel-java" tab="java" id="java"><a id="aria-tab-java" role="button" href="#java">Java</a></tab><tab overflow-tab="" hidden=""><a href="#" class="devsite-icon devsite-icon-arrow-drop-down">Lainnya</a><div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""></div></tab></div></devsite-tabs><section tab="kotlin" role="tabpanel" aria-labelledby="aria-tab-kotlin" tabindex="0" id="tabpanel-kotlin" active="">
+            <devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button></div><pre class="lang-kotlin" translate="no" dir="ltr" is-upgraded=""><span class="kwd">val</span><span class="pln"> skeleton</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="typ">DateFormat</span><span class="pun">.</span><span class="pln">is</span><span class="lit">24</span><span class="pln">HourFormat</span><span class="pun">(</span><span class="pln">context</span><span class="pun">))</span><span class="pln"> </span><span class="str">"Hm"</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="str">"hm"</span><span class="pln"><br></span><span class="kwd">val</span><span class="pln"> formattedTime</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">icu</span><span class="pun">.</span><span class="pln">text</span><span class="pun">.</span><span class="typ">DateFormat</span><span class="pun">.</span><span class="pln">getInstanceForSkeleton</span><span class="pun">(</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; skeleton</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">Locale</span><span class="pun">.</span><span class="pln">getDefault</span><span class="pun">()).</span><span class="pln">format</span><span class="pun">(</span><span class="typ">Date</span><span class="pun">()</span><span class="pln"><br></span><span class="pun">)</span><span class="pln"><br></span></pre></devsite-code>
+            </section><section tab="java" role="tabpanel" aria-labelledby="aria-tab-java" tabindex="0" id="tabpanel-java">
+            <devsite-code data-copy-event-label=""><pre class="lang-java" translate="no" dir="ltr" is-upgraded=""><span class="typ">String</span><span class="pln"> skeleton </span><span class="pun">=</span><span class="pln"> </span><span class="typ">DateFormat</span><span class="pun">.</span><span class="pln">is24HourFormat</span><span class="pun">(</span><span class="pln">context</span><span class="pun">)</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">"Hm"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"hm"</span><span class="pun">;</span><span class="pln"><br></span><span class="typ">String</span><span class="pln"> formattedTime </span><span class="pun">=</span><span class="pln"> android</span><span class="pun">.</span><span class="pln">icu</span><span class="pun">.</span><span class="pln">text</span><span class="pun">.</span><span class="typ">DateFormat</span><span class="pun">.</span><span class="pln">getInstanceForSkeleton</span><span class="pun">(</span><span class="pln">skeleton</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Locale</span><span class="pun">.</span><span class="pln">getDefault</span><span class="pun">()).</span><span class="pln">format</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">());</span><span class="pln"><br></span></pre></devsite-code>
+            </section></devsite-selector>
+          </div>
+
+          <h3>Stabilitas Transliterator</h3>
+          <p>Dimulai dari Android 10 (API level 29),<a href="https://developer.android.com/reference/android/icu/text/Transliterator?hl=id"><code translate="no" dir="ltr">Transliterator</code></a>
+            disediakan untuk mentransliterasi teks dari satu format ke format lainnya. Set ID transliterasi yang tersedia tidak cukup stabil di seluruh rilis dan perangkat Android. Produsen perangkat dapat menambahkan ID transliterasi tambahan. Developer harus memeriksa ID yang tersedia (diperoleh dari
+            <a href="https://developer.android.com/reference/android/icu/text/Transliterator?hl=id#getAvailableIDs()">
+            <code translate="no" dir="ltr">Transliterator.getAvailableIDs()</code></a>
+            ebelum mentransliterasi teks. </p>
+          </p>
+      </div>
+    </div>
+    <div class="navbar">
+      <div class="before">
+        <a href="modulandroo2(3).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+          <div class="steps-link-direction">Previous</div>
+        </a>
+      </div>
+      <div class="next">
+        <a href="subscription.html" class="steps-link gc-analytics-event"  data-action="Next step" >    
+          <div class="steps-link-direction">Next</div>
+        </a>
+      </div>
+    </div>
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

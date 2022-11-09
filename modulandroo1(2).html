@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+        <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="androidev.html">Android Developer</a>
+              <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+              <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+              <a class="dropdown-item" href="machine.html">Machine Learning</a>
+              <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+        </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+        <div id="account-btn"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Menangani Perubahan Konfigurasi</h3>
+      <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+          <p>Sebagian konfigurasi perangkat bisa berubah saat runtime (misalnya orientasi layar, ketersediaan
+              keyboard, dan saat pengguna mengaktifkan <a href="https://developer.android.com/guide/topics/ui/multi-window?hl=id">
+              mode multi-aplikasi</a>). Saat perubahan tersebut terjadi, Android akan memulai ulang
+              <a href="https://developer.android.com/reference/android/app/Activity?hl=id"><code translate="no" dir="ltr">Activity</code></a>
+              yang berjalan (<a href="https://developer.android.com/reference/android/app/Activity?hl=id#ondestroy"><code translate="no" dir="ltr">onDestroy()</code></a> dipanggil, diikuti dengan
+              <a href="https://developer.android.com/reference/android/app/Activity?hl=id#onCreate(android.os.Bundle)">
+              <code translate="no" dir="ltr">onCreate()</code></a>). Perilaku mulai ulang didesain untuk membantu
+              aplikasi Anda beradaptasi dengan konfigurasi baru melalui pemuatan ulang aplikasi secara otomatis dengan
+              resource alternatif yang sesuai dengan konfigurasi perangkat baru.
+          </p>
+          <p>Untuk menangani secara tepat mulai ulang, penting bahwa aktivitas Anda memulihkan status
+              sebelumnya. Anda bisa menggunakan kombinasi objek
+              <a href="https://developer.android.com/reference/android/app/Activity?hl=id#onsaveinstancestate">
+              <code translate="no" dir="ltr">onSaveInstanceState()</code></a>,
+              <a href="https://developer.android.com/reference/androidx/lifecycle/ViewModel?hl=id"><code translate="no" dir="ltr">ViewModel</code></a>, dan penyimpanan persisten untuk menyimpan dan
+              memulihkan status UI aktivitas Anda di seluruh perubahan UI. Untuk informasi selengkapnya tentang cara
+              menyimpan status Aktivitas Anda, baca <a href="https://developer.android.com/topic/libraries/architecture/saving-states?hl=id">Menyimpan status UI</a>.
+          </p>
+          <p>Untuk menguji bahwa aplikasi memulai ulang sendiri dengan status tak berubah, Anda harus
+              memanggil perubahan konfigurasi (seperti mengubah orientasi layar) saat melakukan berbagai
+              tugas dalam aplikasi. Aplikasi Anda harus dapat memulai ulang setiap saat tanpa kehilangan
+              data pengguna atau status untuk menangani peristiwa seperti perubahan konfigurasi atau bila pengguna menerima
+              panggilan telepon masuk lalu kembali ke aplikasi setelah proses aplikasi
+              Anda dimusnahkan. Untuk mengetahui cara mengembalikan status aktivitas, bacalah tentang 
+              <a href="https://developer.android.com/guide/components/activities?hl=id#Lifecycle">Siklus proses aktivitas</a>.
+          </p>
+          <p>Akan tetapi, Anda mungkin menemui situasi ketika memulai ulang aplikasi dan
+              memulihkan data dalam jumlah besar bisa menjadi mahal dan menghasilkan pengalaman pengguna yang buruk. Dalam situasi
+              demikian, Anda memiliki dua opsi lain:
+          </p>
+              <ol type="a">
+                <li><a href="#RetainingAnObject">Mempertahankan objek selama perubahan konfigurasi</a>
+                  <p>Izinkan aktivitas Anda memulai ulang saat konfigurasi berubah, namun bawa objek berstatus ke instance baru aktivitas Anda.</p>
+                </li>
+                <li><a href="#HandlingTheChange">Menangani sendiri perubahan konfigurasi</a>
+                  <p>Tidak disarankan menangani sendiri perubahan konfigurasi karena kompleksitas tersembunyi
+                      dalam menangani perubahan konfigurasi. Namun, jika tidak dapat mempertahankan status UI menggunakan
+                      opsi yang lebih disukai (objek <code translate="no" dir="ltr">onSaveInstanceState()</code>, <code translate="no" dir="ltr">ViewModel</code>, dan penyimpanan persistent) Anda dapat
+                      mencegah sistem memulai ulang aktivitas selama perubahan konfigurasi
+                      tertentu. Aplikasi Anda akan menerima callback ketika konfigurasi melakukan perubahan, sehingga jika diperlukan, Anda dapat
+                      memperbarui aktivitas secara manual.</p>
+                </li>
+              </ol> 
+              <h2>Mempertahankan objek selama perubahan konfigurasi</h2>
+              <p>Jika memulai ulang aktivitas mengharuskan pemulihan serangkaian data dalam jumlah besar, menghubungkan kembali koneksi
+                  jaringan, atau melakukan operasi intensif lainnya, maka mulai ulang penuh karena perubahan konfigurasi
+                  mungkin menjadi pengalaman pengguna yang lambat. Selain itu, Anda mungkin tidak bisa sepenuhnya memulihkan
+                  status aktivitas dengan <a href="https://developer.android.com/reference/android/os/Bundle?hl=id"><code translate="no" dir="ltr">Bundle</code></a> yang disimpan sistem untuk Anda dengan callback
+                  <a href="https://developer.android.com/reference/android/app/Activity?hl=id#onsaveinstancestate">
+                  <code translate="no" dir="ltr">onSaveInstanceState()</code></a> —Bundle tidak
+                  didesain untuk membawa objek besar (seperti bitmap) dan data di dalamnya harus diserialkan kemudian
+                  dinonserialkan di thread utama, yang bisa menghabiskan banyak memori dan membuat perubahan konfigurasi
+                  menjadi lambat. Dalam situasi demikian, Anda dapat mengurangi beban menginisialisasi ulang bagian dari aktivitas Anda menggunakan
+                  <a href="https://developer.android.com/reference/androidx/lifecycle/ViewModel?hl=id"><code translate="no" dir="ltr">ViewModel</code></a>. Objek <code translate="no" dir="ltr">ViewModel</code> dipertahankan
+                  saat perubahan konfigurasi, sehingga ini merupakan tempat yang bagus untuk menyimpan data UI tanpa harus mengirim kueri
+                  lagi. Untuk informasi selengkapnya tentang penggunaan class <code translate="no" dir="ltr">ViewModel</code> di aplikasi Anda, baca
+                  <a href="https://developer.android.com/topic/libraries/architecture/viewmodel?hl=id">ringkasan ViewModel</a>.
+              </p>
+              <h2>Menangani sendiri perubahan konfigurasi</h2>
+              <p>Jika aplikasi Anda tidak memerlukan pembaruan resource selama perubahan konfigurasi
+                  tertentu dan Anda memiliki keterbatasan kinerja yang mengharuskan Anda untuk
+                  menghindari mulai ulang aktivitas, maka Anda bisa mendeklarasikan agar aktivitas Anda menangani sendiri perubahan
+                  konfigurasinya, sehingga mencegah sistem memulai ulang aktivitas.
+              </p>
+              <p class="caution"><strong>Peringatan:</strong> Menangani sendiri perubahan konfigurasi bisa jauh lebih
+                  mempersulit penggunaan resource alternatif, karena sistem tidak menerapkannya secara otomatis
+                  untuk Anda. Teknik ini harus dianggap sebagai usaha terakhir bila Anda harus menghindari mulai ulang karena
+                  perubahan konfigurasi dan tidak disarankan untuk sebagian besar aplikasi.</p>
+              <p>
+                <p>Untuk mendeklarasikan agar aktivitas Anda menangani perubahan konfigurasi, edit elemen <a href="https://developer.android.com/guide/topics/manifest/activity-element?hl=id"><code translate="no" dir="ltr">&lt;activity&gt;</code></a> yang sesuai dalam
+                    file manifes agar menyertakan atribut <a href="https://developer.android.com/guide/topics/manifest/activity-element?hl=id#config"><code translate="no" dir="ltr">android:configChanges</code></a> ditangani. Nilai yang memungkinkan dicantumkan dalam 
+                    dokumentasi untuk atribut <code translate="no" dir="ltr">android:configChanges</code>. Nilai yang paling umum digunakan adalah <code translate="no" dir="ltr">"orientation"</code>, <code translate="no" dir="ltr">"screenSize"</code>,
+                    <code translate="no" dir="ltr">"screenLayout"</code>, dan <code translate="no" dir="ltr">"keyboardHidden"</code>:
+                </p>
+              </p>
+
+              <ul>
+                <li>Nilai <code translate="no" dir="ltr">"orientation"</code> 
+                  mencegah mulai ulang saat orientasi layar berubah.
+                </li>
+                <li>Nilai <code translate="no" dir="ltr">"screenSize"</code> 
+                  juga mencegah mulai ulang saat orientasi berubah, tetapi hanya untuk Android 3.2 (API level 13) dan yang lebih tinggi.
+                </li>
+                <li>Nilai <code translate="no" dir="ltr">"screenLayout"</code>
+                  diperlukan untuk mendeteksi perubahan yang dapat dipicu oleh perangkat seperti ponsel foldable dan Chromebook konvertibel.
+                </li>
+                <li>Nilai <code translate="no" dir="ltr">"keyboardHidden"</code> 
+                  mencegah mulai ulang saat ketersediaan keyboard berubah.
+                </li>
+              </ul>
+              <p>Jika ingin menangani perubahan konfigurasi secara manual di aplikasi, Anda harus mendeklarasikan
+                nilai <code translate="no" dir="ltr">"orientation"</code>, <code translate="no" dir="ltr">"screenSize"</code> dan <code translate="no" dir="ltr">"screenLayout"</code> di
+                atribut <code translate="no" dir="ltr">android:configChanges</code>. Anda bisa mendeklarasikan beberapa nilai
+                konfigurasi dalam atribut dengan memisahkannya menggunakan karakter pipa <code translate="no" dir="ltr">|</code>.
+              </p>
+              <p>Misalnya, kode manifes berikut menyatakan aktivitas yang menangani perubahan orientasi layar maupun perubahan ketersediaan keyboard:</p>                           
+              <p>Sekarang, saat perubahan terjadi di salah satu konfigurasi ini, <code translate="no" dir="ltr">MyActivity</code> tidak akan dimulai ulang.
+                  Sebagai gantinya, <code translate="no" dir="ltr">MyActivity</code> menerima panggilan ke
+                  <a href="https://developer.android.com/reference/android/app/Activity?hl=id#onConfigurationChanged(android.content.res.Configuration)">
+                  <code translate="no" dir="ltr">onConfigurationChanged()</code></a>. Metode ini meneruskan objek <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/android/content/res/Configuration?hl=id">Configuration</a></code> yang menetapkan
+                  konfigurasi perangkat baru. Dengan membaca kolom dalam objek <code translate="no" dir="ltr">Configuration</code>,
+                  Anda dapat menentukan konfigurasi baru dan membuat perubahan yang sesuai dengan memperbarui resource yang digunakan dalam antarmuka. Pada saat
+                  metode ini dipanggil, objek <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/android/content/res/Resources?hl=id">Resources</a></code> aktivitas Anda akan diperbarui
+                  untuk menampilkan resource berdasarkan konfigurasi baru, jadi Anda bisa dengan mudah
+                  menyetel ulang elemen UI tanpa membuat sistem memulai ulang aktivitas Anda.
+              </p>
+              <p>Misalnya, implementasi <code translate="no" dir="ltr">onConfigurationChanged()</code> berikut akan memeriksa orientasi perangkat saat ini:</p>
+              <div>
+                <devsite-selector scope="auto" active="kotlin" ready="">
+                  <devsite-tabs role="tablist" connected="">
+                    <div class="devsite-tabs-wrapper">
+                      <tab role="tab" aria-selected="true" aria-controls="tabpanel-kotlin" tab="kotlin" id="kotlin" active="">
+                        <a id="aria-tab-kotlin" role="button" href="#kotlin" aria-selected="true">Kotlin</a>
+                      </tab>
+                      <tab role="tab" aria-selected="false" aria-controls="tabpanel-java" tab="java" id="java">
+                        <a id="aria-tab-java" role="button" href="#java">Java</a>
+                      </tab>
+                      <tab overflow-tab="" hidden=""><a href="#" class="devsite-icon devsite-icon-arrow-drop-down">Lainnya</a>
+                        <div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""></div>
+                      </tab>
+                    </div>
+                  </devsite-tabs>
+                  <section tab="kotlin" role="tabpanel" aria-labelledby="aria-tab-kotlin" tabindex="0" id="tabpanel-kotlin" active="">
+                    <devsite-code data-copy-event-label="">
+                      <div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan">
+                        <button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button>
+                        <button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button>
+                        <button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button>
+                      </div>
+                      <pre class="lang-kotlin" translate="no" dir="ltr" is-upgraded="">
+                        <span class="kwd">override</span><span class="pln"></span>
+                        <span class="kwd">fun</span><span class="pln">onConfigurationChanged</span>
+                        <span class="pun">(</span><span class="pln">newConfig</span><span class="pun">:</span>
+                        <span class="pln"> </span><span class="typ">Configuration</span><span class="pun">)</span>
+                        <span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;</span>
+                        <span class="kwd">super</span><span class="pun">.</span><span class="pln">onConfigurationChanged</span>
+                        <span class="pun">(</span><span class="pln">newConfig</span><span class="pun">)</span>
+                        <span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Checks the orientation of the screen</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"></span>
+                        <span class="pun">(</span><span class="pln">newConfig</span><span class="pun">.</span>
+                        <span class="pln">orientation </span><span class="pun">===</span><span class="pln"></span>
+                        <span class="typ">Configuration</span><span class="pun">.</span><span class="pln">ORIENTATION</span>
+                        <span class="lit">_L</span><span class="pln">ANDSCAPE</span><span class="pun">)</span>
+                        <span class="pln"></span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp;</span>
+                        <span class="typ">Toast</span><span class="pun">.</span><span class="pln">makeText</span>
+                        <span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span>
+                        <span class="pln"> </span><span class="str">"landscape"</span><span class="pun">,</span>
+                        <span class="pln"> </span><span class="typ">Toast</span><span class="pun">.</span>
+                        <span class="pln">LENGTH</span><span class="lit">_</span><span class="pln">SHORT</span>
+                        <span class="pun">).</span><span class="pln">show</span><span class="pun">()</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"></span>
+                        <span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span>
+                        <span class="pln"></span><span class="pun">(</span><span class="pln">newConfig</span>
+                        <span class="pun">.</span><span class="pln">orientation </span><span class="pun">===</span>
+                        <span class="pln"> </span><span class="typ">Configuration</span><span class="pun">.</span>
+                        <span class="pln">ORIENTATION</span><span class="lit">_</span><span class="pln">PORTRAIT</span>
+                        <span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
+                        <span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">Toast</span>
+                        <span class="pun">.</span><span class="pln">makeText</span><span class="pun">(</span>
+                        <span class="kwd">this</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="str">"portrait"</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="typ">Toast</span><span class="pun">.</span><span class="pln">LENGTH</span>
+                        <span class="lit">_</span><span class="pln">SHORT</span><span class="pun">).</span>
+                        <span class="pln">show</span><span class="pun">()</span><span class="pln"><br>&nbsp; &nbsp; </span>
+                        <span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span>
+                        <span class="pln"><br></span></pre></devsite-code>
+                  </section>
+                  <section tab="java" role="tabpanel" aria-labelledby="aria-tab-java" tabindex="0" id="tabpanel-java">
+                    <devsite-code data-copy-event-label="">
+                      <pre class="lang-java" translate="no" dir="ltr" is-upgraded="">
+                        <span class="lit">@Override</span><span class="pln"><br></span><span class="kwd">public</span>
+                        <span class="pln"> </span><span class="kwd">void</span><span class="pln">onConfigurationChanged</span>
+                        <span class="pun">(</span><span class="typ">Configuration</span><span class="pln"> newConfig</span>
+                        <span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">super</span><span class="pun">.</span>
+                        <span class="pln">onConfigurationChanged</span><span class="pun">(</span><span class="pln">newConfig</span>
+                        <span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp;</span><span class="com">// Checks the orientation of the screen</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"></span>
+                        <span class="pun">(</span><span class="pln">newConfig</span><span class="pun">.</span>
+                        <span class="pln">orientation </span><span class="pun">==</span><span class="pln"></span>
+                        <span class="typ">Configuration</span><span class="pun">.</span><span class="pln">ORIENTATION_LANDSCAPE</span>
+                        <span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
+                        <span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">Toast</span>
+                        <span class="pun">.</span><span class="pln">makeText</span><span class="pun">(</span>
+                        <span class="kwd">this</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="str">"landscape"</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="typ">Toast</span><span class="pun">.</span><span class="pln">LENGTH_SHORT</span>
+                        <span class="pun">).</span><span class="pln">show</span><span class="pun">();</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"></span>
+                        <span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"></span>
+                        <span class="pun">(</span><span class="pln">newConfig</span><span class="pun">.</span>
+                        <span class="pln">orientation </span><span class="pun">==</span><span class="pln"> </span>
+                        <span class="typ">Configuration</span><span class="pun">.</span><span class="pln">ORIENTATION_PORTRAIT</span>
+                        <span class="pun">){</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">Toast</span>
+                        <span class="pun">.</span><span class="pln">makeText</span><span class="pun">(</span>
+                        <span class="kwd">this</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="str">"portrait"</span><span class="pun">,</span><span class="pln"> </span>
+                        <span class="typ">Toast</span><span class="pun">.</span><span class="pln">LENGTH_SHORT</span>
+                        <span class="pun">).</span><span class="pln">show</span><span class="pun">();</span>
+                        <span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span>
+                        <span class="pun">}</span><span class="pln"><br></span>
+                      </pre>
+                    </devsite-code>
+                  </section>
+                </devsite-selector>
+              </div>
+              <p>Objek <code translate="no" dir="ltr">Configuration</code> mewakili semua konfigurasi saat ini,
+                  tidak hanya konfigurasi yang telah berubah. Sering kali Anda tidak perlu memperhatikan dengan persis bagaimana
+                  konfigurasi berubah dan cukup menetapkan kembali semua resource yang memberikan alternatif
+                  untuk konfigurasi yang sedang ditangani. Misalnya, karena objek
+                  <a href="https://developer.android.com/reference/android/content/res/Resources?hl=id"><code translate="no" dir="ltr">Resources</code></a> sekarang diperbarui, Anda dapat menyetel ulang
+                  instance <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/android/widget/ImageView?hl=id">ImageView</a></code> dengan
+                  <code translate="no" dir="ltr"><a href="https://developer.android.com/reference/android/widget/ImageView?hl=id#setImageResource(int)">setImageResource()</a></code>
+                  dan resource yang sesuai untuk konfigurasi baru digunakan (seperti yang dijelaskan dalam <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id#AlternateResources">Ringkasan resource aplikasi</a>).
+              </p>
+              <p>Perhatikan bahwa nilai-nilai dari kolom <code translate="no" dir="ltr">Configuration</code> adalah bilangan bulat
+                  yang sesuai dengan konstanta spesifik dari class <code translate="no" dir="ltr">Configuration</code>. Untuk dokumentasi tentang
+                  konstanta yang harus digunakan di setiap kolom, lihat kolom yang sesuai dalam referensi
+                  <a href="https://developer.android.com/reference/android/content/res/Configuration?hl=id"><code translate="no" dir="ltr">Configuration</code></a>.
+              </p>
+              <p class="note"><strong>Ingat:</strong> Saat mendeklarasikan aktivitas untuk menangani perubahan konfigurasi,
+                  Anda bertanggung jawab untuk menyetel ulang setiap elemen yang alternatifnya Anda berikan. Jika Anda
+                  mendeklarasikan aktivitas untuk menangani perubahan orientasi dan memiliki gambar yang harus berubah
+                  antara lanskap dan potret, Anda harus menetapkan kembali setiap resource ke tiap elemen selama
+                  <a href="https://developer.android.com/reference/android/app/Activity?hl=id#onConfigurationChanged(android.content.res.Configuration)">
+                  <code translate="no" dir="ltr">onConfigurationChanged()</code></a>.
+              </p>
+              <p>Jika Anda tidak perlu memperbarui aplikasi berdasarkan perubahan
+                  konfigurasi ini, sebagai gantinya Anda bisa saja <em>tidak</em> mengimplementasikan <code translate="no" dir="ltr">onConfigurationChanged()</code>. Dalam
+                  hal ini, semua resource yang digunakan sebelum perubahan konfigurasi akan tetap digunakan
+                  dan Anda hanya menghindari mulai ulang aktivitas.
+              </p>
+              <p>Namun, jangan menganggap teknik ini sebagai pengalihan dari mempertahankan status selama siklus proses aktivitas normal.
+                Aplikasi Anda harus selalu dapat dimatikan dan dimulai ulang dengan status sebelumnya tetap utuh.
+                Perubahan konfigurasi yang tidak dapat Anda cegah dapat memulai ulang aplikasi. Jika pengguna keluar dari aplikasi
+                dan aplikasi ditempatkan di latar belakang, sistem mungkin akan mengakhiri proses aplikasi tersebut.
+              </p>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="before">
+          <a href="modulandroo3(1).html"class="steps-link gc-analytics-event" data-action="Previous step">  
+            <div class="steps-link-direction">Previous</div>
+          </a>
+        </div>
+        <div class="next">
+          <a href="modulandroo2(2).html" class="steps-link gc-analytics-event" data-action="Next step">
+            <div class="steps-link-direction">Next</div>
+          </a>
+        </div>
+      </div>
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

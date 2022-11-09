@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+          <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+          <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+          </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+          <div id="account-btn"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Menguji Aplikasi Anda dengan Pseudolocales</h3>
+      <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+          <p>Pseudolocale adalah lokal yang dirancang untuk menyimulasikan karakteristik
+            bahasa yang berpotensi menimbulkan masalah terkait penerjemahan dalam UI, tata letak, dan lainnya saat
+            aplikasi diterjemahkan. Pseudolocale dibuat dengan penerjemahan instan dan otomatis
+            yang dapat dibaca dalam bahasa Inggris untuk semua pesan yang <i>dapat dilokalkan</i>.
+            Pesan non-pseudolocale mengarah pada pesan yang belum diterjemahkan dalam kode sumber Anda.
+            Pseudolocale akan menghemat waktu dan biaya karena Anda dapat menyesuaikan teks UI dan tata letaknya sebelum
+            mengirimkan pesan ke repositori sumber yang akan dikirim untuk diterjemahkan. Untuk melihat daftar yang berisi potensi masalah penerjemahan, lihat
+            <a href="#spot_localization_issues">Menemukan Masalah Pelokalan</a>.
+          </p>
+          <div class="attempt-right" style="clear:right">
+            <img src="https://developer.android.com/static/images/develop/pseudo-locale-example-app_2x.png?hl=id" width="291" alt="">
+            <p class="img-caption"><b>Gambar 1.</b> Pseudolocale Bahasa Inggris (XA)</p>
+          </div>
+          <p>Nama pseudolocale (Android) mengikuti konvensi penamaan lokal standar, dan
+            ID lokalnya dapat diurai oleh bahasa pemrograman apa pun yang mematuhi BCP 47.
+            Dalam pengertian ini, pseudolocale sama dengan lokal lainnya, seperti Prancis,
+            Tionghoa, Rusia, dan sebagainya.
+          </p>
+          <p>Platform Android menyediakan dua pseudolocale berikut untuk merepresentasikan
+            bahasa kiri-ke-kanan (LTR) dan kanan-ke-kiri (RTL):</p>
+
+          <div class="attempt-right" style="clear:right">
+            <img src="https://developer.android.com/static/images/develop/pseudo-locale-example-app-rtl_2x.png?hl=id" width="291" alt="">
+            <p class="img-caption"><b>Gambar 2.</b> Pseudolocale AR (XB)</p>
+          </div>
+            <p><strong>Bahasa Inggris (XA):</strong> Menambahkan aksen Latin ke teks UI bahasa Inggris dasar, memperluas
+              teks asli dengan menambahkan teks tanpa aksen, dan mengelompokkan setiap unit pesan
+              untuk mengekspos potensi masalah dari teks yang diperluas. Potensi masalah dapat berupa kerusakan tata letak
+              dan susunan sintaksis pesan yang buruk, seperti satu kalimat yang dibagi
+              menjadi beberapa bagian lalu ditampilkan sebagai sejumlah pesan dalam tanda kurung. Pseudolocale bahasa Inggris (XA)
+              ditunjukkan dalam gambar 1.
+            </p>
+            <p><strong>AR (XB):</strong> Mengubah arah teks pesan asli kiri-ke-kanan menjadi kanan-ke-kiri, yang membalik urutan karakter dalam pesan asli. 
+              Pseudolocale AR (XB) ditunjukkan dalam gambar 2.
+            </p>
+            <p>Pseudolocale dapat membantu Anda membuat versi RTL aplikasi, meskipun Anda tidak menulis atau berbicara dalam bahasa RTL.</p>
+            <h2>Mengaktifkan Pseudolocale</h2>
+            <p>Pseudolocale biasanya ditambahkan ke build yang berorientasi pada developer. Saat Anda memilih
+              pseudolocale di perangkat, semua aplikasi yang mendukung pseudolocale
+              akan mengikuti karakteristik pseudolocale yang dipilih, termasuk semua aplikasi
+              sistem seperti aplikasi Setelan dan panel Setelan Cepat.
+            </p>
+            <p>
+              Untuk menggunakan pseudolocale Android, Anda harus menjalankan Android 4.3 (API level 18) atau yang lebih tinggi dan mengaktifkan
+              <a href="https://developer.android.com/studio/debug/dev-options?hl=id">opsi developer</a> di perangkat Anda.
+            </p>
+            <p>Prosedur berikut menjelaskan cara mengaktifkan pseudolocale:</p>
+            <ol>
+              <li>
+                <p>Di Android Studio, aktifkan pseudolocale untuk aplikasi tertentu dengan menambahkan
+                konfigurasi berikut ke file <code translate="no" dir="ltr">build.gradle</code> Anda:</p>
+                <div>
+                  <devsite-selector scope="auto" active="groovy" ready="">
+                    <devsite-tabs role="tablist" connected="">
+                      <div class="devsite-tabs-wrapper">
+                        <tab role="tab" aria-selected="true" aria-controls="tabpanel-groovy" tab="groovy" id="groovy" active="">
+                          <a id="aria-tab-groovy" role="button" href="#groovy" aria-selected="true">Groovy</a>
+                        </tab>
+                        <tab role="tab" aria-selected="false" aria-controls="tabpanel-kotlin" tab="kotlin" id="kts">
+                          <a id="aria-tab-kotlin" role="button" href="#kotlin">Kotlin</a>
+                        </tab>
+                        <tab overflow-tab="" hidden="">
+                          <a href="#" class="devsite-icon devsite-icon-arrow-drop-down">Lainnya</a>
+                          <div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""></div>
+                        </tab>
+                      </div>
+                    </devsite-tabs>
+                    <section tab="groovy" role="tabpanel" aria-labelledby="aria-tab-groovy" tabindex="0" id="tabpanel-groovy" active="">
+                      <devsite-code data-copy-event-label="">
+                        <div class="devsite-code-buttons-container" role="group" aria-label="Tombol tindakan">
+                          <button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="Tema kode gelap" data-title="Tema kode gelap"></button>
+                          <button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="Tema kode terang" data-title="Tema kode terang"></button>
+                          <button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="Salin contoh kode" data-title="Salin contoh kode"></button>
+                        </div>
+                        <pre class="lang-groovy" translate="no" dir="ltr" is-upgraded="">
+                          <span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;</span>
+                          <span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp;buildTypes </span><span class="pun">{</span>
+                          <span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp;debug </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                            <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:pseudoLocalesEnabled"><code dir="ltr">
+                          <span class="pln">pseudoLocalesEnabled</span></code></a><span class="pln"> </span><span class="kwd">true</span>
+                          <span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp;</span>
+                          <span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span>
+                        </pre>
+                      </devsite-code>
+                    </section>
+                    <section tab="kotlin" role="tabpanel" aria-labelledby="aria-tab-kotlin" tabindex="0" id="tabpanel-kotlin">
+                      <devsite-code data-copy-event-label="">
+                        <pre class="lang-kotlin" translate="no" dir="ltr" is-upgraded=""><span class="pln">android </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;</span><span class="pun">...</span><span class="pln"><br>&nbsp; &nbsp;buildTypes</span><span class="pun">.</span><span class="pln">getByName</span><span class="pun">(</span><span class="str">"debug"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp;isPseudoLocalesEnabled </span><span class="pun">=</span><span class="pln"> </span><span class="lit">true</span><span class="pln"><br>&nbsp; &nbsp;</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></pre></devsite-code>
+                    </section>
+                  </devsite-selector>
+                </div>
+              </li>
+              <li>
+                <p><a href="https://developer.android.com/studio/run?hl=id">Build dan jalankan aplikasi Anda</a>.</p>
+                <div class="attempt-right" style="clear:right">
+                  <img src="https://developer.android.com/static/images/develop/pseudo-locale-select_2x.png?hl=id" width="291" alt="" align="right">
+                  <p class="img-caption"><b>Gambar 3.</b> Pilih salah satu pseudolocale</p>
+                </div>
+              </li>
+              <li>
+                <p>Gunakan aplikasi Setelan untuk memilih pseudolocale sesuai
+                  versi Android Anda:</p>  
+                <p><strong>Android 5.0 atau yang lebih tinggi:</strong></p>
+                <ol type="a">
+                  <li>Di perangkat Anda, buka aplikasi Setelan, lalu ketuk <strong>Bahasa dan input &gt;
+                    Preferensi bahasa</strong>.</li>
+                  <li>Dalam daftar <strong>Preferensi bahasa</strong>, tekan tab untuk memindahkan
+                    pseudolocale ke bagian atas daftar guna membuatnya menjadi bahasa yang aktif
+                    (lihat gambar 3).</li>
+                </ol> 
+                <p><strong>Android 4.4.4 atau versi yang sebelumnya:</strong></p> 
+                <ol type="a">
+                  <li>Di perangkat Anda, buka aplikasi Setelan, lalu ketuk <strong>Bahasa dan input &gt;
+                    Preferensi bahasa &gt; Tambahkan bahasa</strong>.</li>
+                  <li>Ketuk salah satu pseudolocale untuk menambahkannya ke daftar <strong>Preferensi bahasa</strong>.</li>
+                  <li>Dalam daftar <strong>Preferensi bahasa</strong>, tekan tab untuk memindahkan
+                    pseudolocale ke bagian atas daftar guna membuatnya menjadi bahasa yang aktif
+                    (lihat gambar 3).</li>
+                </ol>
+              </li>
+            </ol>
+          <h2>Menemukan masalah pelokalan</h2>
+            <p>Pseudolocale memberikan cara yang efektif dan dapat menghemat waktu untuk menemukan potensi
+              masalah pelokalan dalam UI dengan membantu Anda mengidentifikasi masalah di
+              area-area berikut:
+            </p>
+          <ul>
+            <li>String hard code, yang tidak dapat dikirim untuk diterjemahkan, ditampilkan
+              sebagai teks tanpa aksen dalam pseudolocale agar mudah dilihat.</li>
+            <li>Masalah tata letak UI yang disebabkan oleh perluasan teks yang menunjukkan di mana UI dapat terpotong
+              karena panjang teks.</li>
+            <li><p>Penyambungan string, yang ditampilkan sebagai pemisahan satu pesan ke dalam 2 atau
+              beberapa tanda kurung. Masalah ini dapat mempersulit proses untuk memperoleh terjemahan yang benar karena
+              penerjemah harus menerjemahkan setiap bagian secara terpisah tanpa mengetahui
+              keterkaitannya. Penyambungan string juga dapat membuat terjemahan menjadi salah
+              karena bahasa yang berbeda
+              mungkin memerlukan urutan bagian yang berbeda atau struktur kalimat yang
+              benar-benar berbeda. Misalnya, beberapa bahasa seperti Jepang, Korea, dan
+              Tamil menempatkan kata kerja di bagian akhir. Jika kalimat digabungkan,
+              penerjemah tidak dapat mengubah urutan kata sesuai kebutuhan.</p></li>
+            <li><p>Masalah teks dua arah (BIDI), seperti ketika konten dalam satu arah teks
+              menyertakan frasa sebaris dalam arah teks yang berlawanan sehingga string menjadi
+              sulit dibaca.</p></li>
+            <li><p>Masalah kanan-ke-kiri (RTL), seperti elemen yang tidak dicerminkan. Contohnya,
+              elemen UI tidak berpindah ke kiri, teks tidak dibalik dan berpindah ke
+              kiri, atau tanda baca salah ditempatkan, seperti "aturan pseudolocale!" yang berubah menjadi
+              "elur selacoloduesp!", padahal seharusnya adalah "!elur selacoloduesp".</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="before">
+          <a href="modulandroo1(3).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+            <div class="steps-link-direction">Previous</div>
+          </a>
+        </div>
+        <div class="next">
+          <a href="modulandroo3(3).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+            <div class="steps-link-direction">Next</div>
+          </a>
+        </div>
+      </div>
+    <!-- modul course section starts  -->
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

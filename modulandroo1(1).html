@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+   <body>
+   
+      <!-- header section starts  -->
+      <header class="header">
+         <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+         <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+               <a href="home.html">Home</a>
+            <div class="dropdown">
+               <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                  <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+               </a> 
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                  <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                  <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                  <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                  <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+               </div>
+            </div>
+               <a href="testimonial.html">Testimoni</a>
+               <a href="blog.html">Blogs</a>
+               <a href="contact.html">Contact</a>
+               <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+               <a type="btn" href="signin.html">Sign In</a>
+         </nav>
+         <div class="overlay" data-nav-toggler data-overlay></div>
+
+         <div class="icons">
+            <div id="account-btn"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+         </div>
+      </header>
+      <!-- header section ends -->
+
+      <section class="heading-link">
+         <h3>Membuat Project Android</h3>
+         <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+      </section>
+
+      <!-- modul course section starts  -->
+      <div class="main">
+         <div class="container">
+            <p>Tutorial ini menunjukkan cara membuat project Android baru dengan Android Studio, dan menjelaskan beberapa file dalam project tersebut.
+            <p> Untuk membuat project Android baru, ikuti langkah-langkah berikut:</p>
+            <ol>
+               <li>Install <a href="https://developer.android.com/studio/?hl=id">Android Studio</a> versi terbaru</li>
+               <br>
+               <li>Di jendela <strong>WElcome to Android Studio</strong>, klik <strong>Create NEw Project</strong></li>
+                  <img src="https://developer.android.com/static/training/basics/firstapp/images/studio-welcome.png?hl=id" width="756" alt="">
+                  <p>Jika sudah membuka project, pilih <strong> File > New > New Project</strong>.</p>
+               <br>
+               <li> Di jendela <strong>Select a Project Template</strong>, pilih <strong> Activity </strong>, lalu klik <strong>Next</strong></li>
+               <br>
+               <li>Di jendela <strong>Configure your project</strong>, lakukan langkah-langkah berikut:
+               <br>
+               <ul> 
+                  <br>
+                  <li>Masukkan "My First App" pada kolom <strong>Name</strong></li>
+                  <br>
+                  <li> Masukkan "com.example.myfirstapp" pada kolom <strong>Package name</strong>.</li>
+                  <br>
+                  <li>Jika Anda ingin menempatkan project di folder lain, ubah lokasi <strong>Save</strong>-nya.</li>
+                  <br>
+                  <li> Pilih <strong>Java</strong> atau <strong>Kotlin</strong> dari menu drop-down <strong>Language</strong>.</li>
+                  <br>
+                  <li> Pilih Android versi terendah yang ingin didukung aplikasi Anda di kolom <strong>Minimum SDK</strong>.</li>
+                  <br>
+                  <li>Jika aplikasi Anda memerlukan dukungan library lama, centang kotak <strong>Use legacy android.support libraries</strong>.</li>
+                  <br>
+                  <li> Biarkan opsi lain sebagaimana adanya.</li>
+               </ul>
+               <br>
+               <li> Klik Finish.</li>
+               </ol>
+               <br>
+                  <p> Setelah beberapa waktu pemrosesan, jendela utama Android Studio akan muncul.</p>
+                  <img src="https://developer.android.com/static/training/basics/firstapp/images/studio-editor.png?hl=id" alt="" width="856">
+               <br>
+                  <p>Sekarang, luangkan waktu untuk meninjau file-file yang paling penting.</p>
+               <br>    
+                  <p>Pertama, pastikan jendela <strong>Project</strong> terbuka (pilih <strong>View > Tool Windows > Project</strong>) dan tampilan Android dipilih dari menu drop-down di bagian atas jendela tersebut. Kemudian, Anda bisa melihat file berikut:
+               <br>
+                  <p><strong> app > java > com.example.myfirstapp > MainActivity</strong></p>
+                  <p>Ini adalah aktivitas utama. Ini adalah titik entri aplikasi Anda. Saat Anda membuat dan menjalankan aplikasi, sistem akan meluncurkan instance Activity ini dan memuat tata letaknya.</p>
+               <br>
+                  <p><strong>app > res > layout > activity_main.xml</strong></p>
+                  <p>File XML ini menentukan tata letak antarmuka pengguna (UI) aktivitas. File ini berisi elemen TextView dengan teks "Hello, World!"</p>
+               <br>
+                  <p><strong>app > manifests > AndroidManifest.xml</strong></p>
+                  <p>File manifes menjelaskan karakteristik dasar aplikasi dan mendefinisikan masing-masing komponennya.</p>
+               <br>
+                  <p><strong>Gradle Scripts > build.gradle</strong></p>
+                  <p>Ada dua file dengan nama berikut: satu untuk project, "Project: My_First_App", dan satu lagi untuk modul aplikasi, "Module: My_First_App.app". Setiap modul memiliki file build.gradle sendiri, tetapi project ini saat ini hanya memiliki satu modul. Gunakan file build.gradle setiap modul untuk mengontrol cara plugin Gradle membuat aplikasi. Untuk informasi selengkapnya tentang file ini, lihat Mengonfigurasi build.
+                  Untuk menjalankan aplikasi, lanjutkan ke tutorial berikutnya, Menjalankan aplikasi.</p>
+         </div>
+      </div>
+      <div class="navbar">
+            <div class="before">
+               <a href="#"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+                  <div class="steps-link-direction">Previous</div>
+               </a>
+            </div>
+            <div class="next">
+               <a href="modulandroo2(1).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+                  <div class="steps-link-direction">Next</div>
+               </a>
+            </div>
+      </div>
+      <!-- modul course section starts  -->
+      
+      <!-- swiper js link  -->
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      
+      <!-- droppdown js link  -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+      <!-- custom js file link  -->
+      <script src="js/script.js"></script>
+
+   </body>
+</html>

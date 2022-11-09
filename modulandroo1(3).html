@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+
+      <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+        <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="androidev.html">Android Developer</a>
+              <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+              <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+              <a class="dropdown-item" href="machine.html">Machine Learning</a>
+              <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+        </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+        <div id="account-btn"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Melokalkan Aplikasi Anda</h3>
+      <p> <a href="androiddeveloper.html">Course</a> / Android Developer / Pemula</p>
+    </section>
+
+      <!-- modul course section starts  -->
+      <div class="main">
+        <div class="container">
+          <p>Android berjalan di banyak perangkat dan wilayah. Untuk menjangkau sebagian besar pengguna, aplikasi Anda harus menangani teks, file audio, angka, mata uang, dan grafik sesuai dengan lokal tempat aplikasi Anda digunakan.</p>
+          <p>Dokumen ini menjelaskan praktik terbaik untuk melokalkan aplikasi Android.</p>
+          <p>Anda seharusnya memiliki pengetahuan tentang bahasa pemrograman Kotlin atau Java dan sudah tidak asing lagi dengan
+            <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id">pemuatan resource Android</a>,
+            <a href="https://developer.android.com/guide/topics/ui/declaring-layout?hl=id">deklarasi elemen antarmuka pengguna dalam XML</a>,
+            pertimbangan pengembangan seperti
+            <a href="https://developer.android.com/guide/components/activities/activity-lifecycle?hl=id">siklus hidup aktivitas</a>,
+            serta prinsip-prinsip umum internasionalisasi dan pelokalan.
+          </p>
+          <p>Sebaiknya gunakan framework resource Android untuk memisahkan aspek yang dilokalkan dari aplikasi Anda sebanyak mungkin dari fungsi aplikasi inti:</p>
+
+          <ul>
+            <li>Anda bisa menempatkan sebagian besar atau semua <em>konten</em> antarmuka pengguna aplikasi Anda ke dalam
+                file resource, seperti yang dijelaskan dalam dokumen ini dan
+                <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id">Menyediakan Resource</a>.
+            </li>
+            <li>Di sisi lain, <em>perilaku</em> antarmuka pengguna didorong
+                oleh kode berbasis Kotlin atau Java Anda. Misalnya, jika pengguna memasukkan data yang harus
+                diformat atau diurutkan secara berbeda tergantung lokalitas, Anda harus menggunakan bahasa pemrograman Kotlin atau
+                Java untuk menangani data tersebut secara terprogram. Topik ini tidak
+                membahas cara melokalkan kode berbasis Java atau Kotlin.
+            </li>
+          </ul>
+          
+          <p>Untuk panduan pelokalan lokal string dalam aplikasi Anda, lihat
+            <a href="https://developer.android.com/training/basics/supporting-devices/languages?hl=id">Mendukung Bahasa yang Berbeda</a>.</p>
+
+            <h2>Ringkasan: Pengalihan resource di Android</h2>
+            <p>Resource adalah string teks, tata letak, suara, grafik, dan data statis lainnya yang diperlukan aplikasi Android Anda. Aplikasi dapat 
+                menyertakan beberapa kumpulan resource, yang masing-masingnya disesuaikan untuk konfigurasi perangkat yang berbeda. Saat pengguna menjalankan 
+                aplikasi tersebut, Android otomatis memilih dan memuat resource yang paling sesuai dengan perangkat.
+            </p>
+            <p>Topik ini berfokus pada pelokalan dan lokal. Untuk deskripsi lengkap tentang pengalihan resource dan semua jenis konfigurasi yang dapat Anda 
+                tentukan (orientasi layar, jenis layar sentuh, dan sebagainya), lihat <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id#AlternativeResources">
+                Menyediakan Resource Alternatif</a>.)
+            </p>
+            <p>Saat menulis aplikasi, Anda membuat resource default dan alternatif untuk digunakan aplikasi Anda. Saat pengguna menjalankan aplikasi 
+              Anda, sistem Android akan memilih resource yang dimuat berdasarkan lokalitas perangkat. Untuk membuat resource, tempatkan file di dalam
+              subdirektori yang diberi nama secara khusus pada direktori <code translate="no" dir="ltr">res/</code> project.
+            </p>
+            <h3>Alasan pentingnya resource default</h3>
+            <p>Setiap kali aplikasi berjalan di lokalitas tempat Anda tidak memberikan
+              teks khusus lokalitas, Android akan memuat string default dari
+              <code translate="no" dir="ltr">res/values/strings.xml</code>. Jika file default ini tidak ada, atau jika
+              string yang dibutuhkan aplikasi Anda tidak ditemukan, aplikasi Anda tidak akan berjalan
+              dan kemudian menampilkan error. Contoh di bawah mengilustrasikan hal yang dapat terjadi jika
+              file teks default tidak lengkap.
+            </p>
+            <p><em>Contoh:</em></p>
+            <p>Kode berbasis Kotlin atau berbasis Java aplikasi hanya merujuk ke dua string, <code translate="no" dir="ltr">text_a</code>
+              dan <code translate="no" dir="ltr">text_b</code>. Aplikasi ini menyertakan file resource terlokalkan
+              (<code translate="no" dir="ltr">res/values-en/strings.xml</code>) yang menentukan <code translate="no" dir="ltr">text_a</code> dan
+              <code translate="no" dir="ltr">text_b</code> dalam bahasa Inggris. Aplikasi ini juga menyertakan file
+              resource default (<code translate="no" dir="ltr">res/values/strings.xml</code>) yang menyertakan
+              definisi untuk <code translate="no" dir="ltr">text_a</code>, tetapi tidak untuk <code translate="no" dir="ltr">text_b</code>:
+            </p>
+
+            <ul>
+              <li>Saat aplikasi ini diluncurkan di perangkat dengan lokalitas yang disetel ke bahasa Inggris,
+                  aplikasi dapat berjalan tanpa masalah, karena <code translate="no" dir="ltr">res/values-en/strings.xml</code> berisi kedua string teks
+                  yang diperlukan.
+              </li>
+              <li>Namun, <strong>pengguna akan melihat pesan error dan tombol Force
+                  Close</strong> saat aplikasi ini diluncurkan di perangkat yang disetel ke bahasa selain bahasa Inggris. Aplikasi tersebut tidak akan dimuat.
+              </li>
+            </ul>
+
+            <p>Untuk mencegah situasi ini, pastikan bahwa file <code translate="no" dir="ltr">res/values/strings.xml</code>
+              ada dan file tersebut menentukan setiap string yang diperlukan. Situasi tersebut berlaku untuk
+              semua jenis resource, tidak hanya string: Anda harus membuat sekumpulan file resource default
+              yang berisi semua resource yang dipanggil oleh aplikasi Anda
+              (tata letak, drawable, animasi, dan sebagainya aktif). Untuk informasi tentang pengujian, lihat
+              <a href="#test-for-default">Menguji Resource Default</a>.
+            </p>
+            <h2>Menggunakan resource untuk pelokalan</h2>
+            <h3>Cara membuat resource default</h3>
+            <p>Tempatkan teks default aplikasi di <code translate="no" dir="ltr">res/values/strings.xml</code>.</p>
+            <p>String teks di <code translate="no" dir="ltr">res/values/strings.xml</code> harus menggunakan
+                bahasa default, yaitu bahasa yang menurut Anda paling sering digunakan oleh pengguna aplikasi Anda.
+            </p>
+            <p>Kumpulan resource default juga harus menyertakan semua drawable serta tata letak default,
+                dan dapat menyertakan jenis resource lain seperti animasi:
+            </p>
+                                        
+            <ul>
+              <li><code translate="no" dir="ltr">res/drawable/</code>(direktori wajib berisi setidaknya
+                satu file grafis, untuk ikon aplikasi di Google Play)
+              </li>
+              <li><code translate="no" dir="ltr">res/layout/</code> (direktori wajib berisi file XML
+                yang menentukan tata letak default)
+              </li>
+              <li><code translate="no" dir="ltr">res/anim/</code> (diperlukan jika Anda memiliki folder
+                <code translate="no" dir="ltr">res/anim-<em>&lt;qualifiers&gt;</em></code>)
+              </li>
+              <li><code translate="no" dir="ltr">res/xml/</code> (diperlukan jika Anda memiliki folder
+                <code translate="no" dir="ltr">res/xml-<em>&lt;qualifiers&gt;</em></code>)
+              </li>
+              <li><code translate="no" dir="ltr">res/raw/</code> (diperlukan jika Anda memiliki folder
+                <code translate="no" dir="ltr">res/raw-<em>&lt;qualifiers&gt;</em></code>)
+              </li>
+            </ul> 
+            
+            <p class="note"><strong>Tips:</strong> Di kode Anda, periksa setiap referensi ke
+              resource Android. Pastikan bahwa resource default sudah ditentukan untuk setiap referensi tersebut.
+              Pastikan juga file string defaultnya lengkap: File string <em>terlokalkan</em>
+              dapat berisi subset string, tetapi file string <em>default</em> harus berisi semuanya.
+            </p>
+            <h3>CAra membuat resource alternatif</h3>
+            <p>Sebagian besar pelokalan aplikasi adalah memberikan teks alternatif untuk
+                bahasa yang berbeda. Dalam beberapa kasus, Anda juga memberikan resource grafis,
+                suara, dan tata letak alternatif, serta resource khusus lokalitas lainnya.</p>
+            <p>Aplikasi dapat menentukan banyak direktori <code translate="no" dir="ltr">res/<em>&lt;qualifiers&gt;</em>/</code>,
+                yang masing-masingnya memiliki penentu yang berbeda. Agar dapat membuat resource alternatif untuk
+                lokalitas yang berbeda, gunakan penentu yang menentukan bahasa atau kombinasi bahasa-wilayah. 
+                Nama direktori resource harus sesuai dengan skema penamaan yang dijelaskan dalam
+                <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id#AlternativeResources">Menyediakan
+                Resource Alternatif</a>, atau aplikasi Anda tidak akan dapat mengompilasi.
+            </p>
+            <p><em>Contoh:</em></p>
+            <p>Misalnya bahasa default aplikasi Anda adalah bahasa Inggris. Misalnya Anda
+              juga ingin melokalkan semua teks dalam aplikasi ke bahasa Prancis, dan sebagian besar
+              teks di aplikasi (semuanya kecuali judul aplikasi) ke
+              bahasa Jepang. Dalam hal ini, Anda dapat membuat tiga file <code translate="no" dir="ltr">strings.xml</code>
+              alternatif, masing-masing disimpan dalam direktori resource khusus lokal:
+            </p>
+            
+            <ol>
+              <li><code translate="no" dir="ltr">res/values/strings.xml</code><br>
+                Berisi teks bahasa Inggris untuk semua string yang digunakan aplikasi tersebut,
+                termasuk teks untuk string bernama <code translate="no" dir="ltr">title</code>.
+              </li>
+              <li><code translate="no" dir="ltr">res/values-fr/strings.xml</code><br>
+                Berisi teks bahasa Prancis untuk semua string, termasuk <code translate="no" dir="ltr">title</code>.
+              </li>
+              <li><code translate="no" dir="ltr">res/values-ja/strings.xml</code><br>
+                Berisi teks bahasa Jepang untuk semua string <em>kecuali</em>
+                <code translate="no" dir="ltr">title</code>.<br>
+              </li>
+            </ol>
+            <p>Jika kode berbasis Kotlin atau Java merujuk ke <code translate="no" dir="ltr">R.string.title</code>, inilah yang akan
+              terjadi pada waktu proses:</p>
+              <ul>
+                <li>Jika perangkat disetel ke bahasa selain bahasa Prancis, Android akan memuat
+                  <code translate="no" dir="ltr">title</code> dari file <code translate="no" dir="ltr">res/values/strings.xml</code>.</li>
+                <li>Jika perangkat disetel ke bahasa Prancis, Android akan memuat <code translate="no" dir="ltr">title</code> dari file
+                  <code translate="no" dir="ltr">res/values-fr/strings.xml</code>.</li>
+              </ul>
+              <p>Perhatikan bahwa jika perangkat disetel ke bahasa Jepang, Android akan mencari
+                <code translate="no" dir="ltr">title</code> dalam file <code translate="no" dir="ltr">res/values-ja/strings.xml</code>. Tetapi,
+                karena tidak ada string seperti itu yang disertakan dalam file tersebut, Android akan menggunakan
+                defaultnya kembali, dan memuat <code translate="no" dir="ltr">title</code> dalam bahasa Inggris dari file
+                <code translate="no" dir="ltr">res/values/strings.xml</code>.
+              </p>
+              <h3>Resource mana yang lebih diutamakan?</h3>
+              <p>Jika beberapa file resource cocok dengan konfigurasi perangkat, Android akan mengikuti
+                sekumpulan aturan dalam menentukan file yang akan digunakan. Di antara penentu yang dapat
+                ditentukan dalam nama direktori resource, <strong>lokalitas hampir selalu
+                diutamakan</strong>.
+              </p>
+              <p><em>Contoh:</em></p>
+              <p>Asumsikan bahwa aplikasi menyertakan kumpulan grafik default dan dua kumpulan grafik lain, masing-masingnya dioptimalkan untuk penyiapan perangkat yang berbeda:</p>                                                          
+              <p>Jika beberapa file resource cocok dengan konfigurasi perangkat, Android akan mengikuti
+                sekumpulan aturan dalam menentukan file yang akan digunakan. Di antara penentu yang dapat ditentukan dalam nama direktori resource, <strong>lokalitas hampir selalu
+                diutamakan</strong>.
+              </p>
+              <p><em>Contoh:</em></p>
+              <p>Asumsikan bahwa aplikasi menyertakan kumpulan grafik default dan dua kumpulan grafik lain, masing-masingnya dioptimalkan untuk penyiapan perangkat yang berbeda:</p>
+              <ul>
+                <li><code translate="no" dir="ltr">res/drawable/</code><br>
+                  Berisi grafis default.</li>
+                <li><code translate="no" dir="ltr">res/drawable-small-land-stylus/</code><br>
+                  Berisi grafis yang dioptimalkan untuk digunakan dengan perangkat yang mengharapkan input dari
+                  stilus dan memiliki layar berkepadatan rendah QVGA dalam orientasi lanskap.</li>
+                <li><code translate="no" dir="ltr">res/drawable-ja/</code><br>
+                  Berisi grafis yang dioptimalkan untuk digunakan dengan bahasa Jepang.</li>
+              </ul>                                                              
+              <ul>
+                <li><code translate="no" dir="ltr">res/drawable/</code><br>
+                  Berisi grafis default.</li>
+                <li><code translate="no" dir="ltr">res/drawable-small-land-stylus/</code><br>
+                  Berisi grafis yang dioptimalkan untuk digunakan dengan perangkat yang mengharapkan input dari
+                  stilus dan memiliki layar berkepadatan rendah QVGA dalam orientasi lanskap.</li>
+                <li><code translate="no" dir="ltr">res/drawable-ja/</code><br>
+                  Berisi grafis yang dioptimalkan untuk digunakan dengan bahasa Jepang.</li>
+              </ul>
+              <p>Jika aplikasi berjalan di perangkat yang dikonfigurasi untuk menggunakan bahasa Jepang,
+                Android akan memuat grafis dari <code translate="no" dir="ltr">res/drawable-ja/</code>, meskipun perangkat
+                kebetulan adalah salah satu yang mengharapkan input dari stilus dan memiliki layar berkepadatan
+                rendah QVGA dalam orientasi lanskap.
+              </p>
+              <p class="note"><strong>Pengecualian:</strong> Satu-satunya penentu yang lebih
+                  diutamakan daripada lokal dalam proses pemilihan adalah MCC dan MNC (kode negara
+                  seluler dan kode jaringan seluler).</p>
+
+              <p><em>Contoh:</em></p>
+              <p>Asumsikan bahwa Anda mendapati situasi berikut:</p>                                                            
+              <ul>
+                <li>Kode aplikasi memanggil <code translate="no" dir="ltr">R.string.text_a</code></li>
+                <li>Tersedia dua file resource yang relevan:
+                  <ul>
+                    <li><code translate="no" dir="ltr">res/values-mcc404/strings.xml</code>, yang menyertakan
+                      <code translate="no" dir="ltr">text_a</code> dalam bahasa default aplikasi, dalam hal ini
+                      bahasa Inggris.</li>
+                    <li><code translate="no" dir="ltr">res/values-hi/strings.xml</code>, yang menyertakan
+                      <code translate="no" dir="ltr">text_a</code> dalam bahasa Hindi.</li>
+                  </ul>
+                </li>  
+              </ul>
+              <ul>
+                <li>Kode aplikasi memanggil <code translate="no" dir="ltr">R.string.text_a</code></li>
+                <li>Tersedia dua file resource yang relevan:
+                  <ul>
+                    <li><code translate="no" dir="ltr">res/values-mcc404/strings.xml</code>, yang menyertakan
+                      <code translate="no" dir="ltr">text_a</code> dalam bahasa default aplikasi, dalam hal ini
+                      bahasa Inggris.</li>
+                    <li><code translate="no" dir="ltr">res/values-hi/strings.xml</code>, yang menyertakan
+                      <code translate="no" dir="ltr">text_a</code> dalam bahasa Hindi.</li>
+                  </ul>
+                </li>  
+              </ul>
+              <ul>
+                <li>Aplikasi sedang berjalan di perangkat yang memiliki konfigurasi
+                  berikut:
+                  <ul>
+                    <li>Kartu SIM terhubung ke jaringan seluler di India (MCC 404).</li>
+                    <li>Bahasa disetel ke bahasa Hindi (<code translate="no" dir="ltr">hi</code>).</li>
+                  </ul>
+                </li>
+              </ul>
+              <p>Android akan memuat <code translate="no" dir="ltr">text_a</code> dari
+                  <code translate="no" dir="ltr">res/values-mcc404/strings.xml</code> (dalam bahasa Inggris), meskipun jika perangkat
+                  dikonfigurasikan untuk bahasa Hindi. Hal ini dikarenakan dalam proses pemilihan resource, Android
+                  mengutamakan kecocokan MCC daripada kecocokan bahasa.
+              </p>
+              <p>Proses pemilihan tidak selalu terlihat sederhana seperti yang ditampilkan dalam contoh-contoh
+                  tersebut. Lihat <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id#BestMatch">Cara Android Menemukan
+                  Resource yang Paling Cocok</a> untuk deskripsi yang lebih terperinci tentang proses tersebut.
+                  Semua penentu akan dijelaskan dan dicantumkan dalam urutan prioritas di
+                  <a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=id#table2">Tabel 2 tentang
+                  Menyediakan Resource Alternatif</a>.
+              </p>
+        </div>
+      </div>
+
+      <div class="navbar">
+          <div class="before">
+              <a href="modulandroo2(2).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+                <div class="steps-link-direction">Previous</div>
+              </a>
+            </div>
+          <div class="next">
+            <a href="modulandroo2(3).html" class="steps-link gc-analytics-event"  data-action="Next step" >
+                
+                <div class="steps-link-direction">Next</div>
+              </a>
+            </div>
+      </div>
+      <!-- modul course section starts  -->
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+      
+      .navbarrc {
+        overflow: hidden;
+        background-color:#6495ed;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbarrc a {
+        float: left;
+        display: block;
+        color: #100e0e;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+      }      
+      .navbarrc a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+      
+      .navbarrc a.active {
+        background-color: #0470aa;
+        color: white;
+      }
+      .main {
+        padding: 0 25%;
+        margin-bottom: 100px;
+       
+      }
+      h4{
+        color: rgba(63,63,70);
+        text-align: left;
+        font-family: "Open Sans",sans-serif;
+        font-size: 28px;
+      }
+      
+      </style>
+
+</head>
+  <body>
+   
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-lightbulb"></i> KEKA </a>
+      <nav class="navbar">
+          <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+          <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle">Course</button>
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="androidev.html">Android Developer</a>
+                <a class="dropdown-item" href="frontendev.html">Front-end Developer</a>
+                <a class="dropdown-item" href="backendev.html">Back-end Developer</a>
+                <a class="dropdown-item" href="machine.html">Machine Learning</a>
+                <a class="dropdown-item" href="iosdev.html">IOS Developer</a>
+            </div>
+          </div>
+            <a href="testimonial.html">Testimoni</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="joinus.html"><button type="button" class="btn">Join Us</button></a>
+            <a type="btn" href="signin.html">Sign In</a>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+      <div class="icons">
+          <div id="account-btn"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <section class="heading-link">
+      <h3>Requirement Tools</h3>
+      <p> <a href="frontenddeveloper.html">Course</a> / Front-End Developer / Pemula</p>
+    </section>
+
+    <!-- modul course section starts  -->
+    <div class="main">
+        <div class="container">
+        <p>Terdapat tools yang harus kita siapkan sebelumnya untuk mengikuti kelas ini, yaitu Text Editors dan Browser.</p>  
+        <p><h4>Text Editors</h4></p>
+        <p>Dalam mengembangkan sebuah website, tentu kita akan banyak menuliskan sebuah kode HTML, CSS, maupun JavaScript. Maka dari itu, langkah awal yang harus kita siapkan adalah sebuah text editor. Beberapa sistem operasi sebenarnya sudah menyediakan text editor usungannya sendiri. Contohnya Windows memiliki Notepad, Linux memiliki Text Editors dan Macintosh memiliki TextEdit. Ketiga aplikasi tersebut bisa kita gunakan untuk belajar membuat sebuah website, meskipun masih banyak alternatif text editor lainnya selama masih dapat menyimpan sebuah plain text dengan format .html.</p>
+        <p>Perlu diperhatikan bahwa kode yang kita tuliskan merupakan sebuah plain text. Pastikan kita menggunakan text editor yang tepat. Jangan pernah menggunakan Microsoft Word untuk menuliskan sebuah kode, karena aplikasi tersebut menampilkan teks yang telah diformat atau biasa disebut dengan rich text.</p>
+        <p>Selain text editors usungan sistem operasi yang kita gunakan, berikut tiga text editor lainnya yang bisa kita gunakan untuk membuat sebuah website.</p>
+            <p><h4>Visual Studio Code</h4></p>
+            <p dir="ltr">Visual Studio Editor merupakan sebuah <em>text editor</em> yang dikembangkan oleh Microsoft. Dalam <em>text editor</em> ini terdapat fitur <em>debugging</em>, <em>Git control</em>, <em>syntax highlighting,</em> <em>code completion</em>, <em>snippets,</em> dan <em>code refactoring</em>. Visual Studio Code tersedia untuk sistem operasi Windows, Mac maupun Linux, dan tentunya <em>text editor</em> ini bisa kita gunakan secara gratis. Untuk mengunduhnya silakan kunjungi website berikut: <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer noopener">https://code.visualstudio.com/</a></p>
+            <p><h4>Atom editor</h4></p>
+            <p dir="ltr">Atom merupakan <em>text editor</em> gratis dan juga <em>open source</em> untuk Windows, Linux, dan MacOS. Sama seperti Visual Studio Editor, kedua <em>text editor</em> ini merupakan editor yang populer digunakan oleh web developer. Untuk mengunduhnya, silakan kunjungi website berikut: <a href="https://atom.io/" target="_blank" rel="noreferrer noopener">https://atom.io/</a></p>
+            <p><h4>Emacs</h4></p>
+            <p dir="ltr">Editor ini mungkin tidak secanggih opsi-opsi sebelumnya dalam menuliskan kode HTML, CSS, dan JavaScript. Namun, jika kalian tertarik belajar melalui proses tanpa fitur yang mempermudah kita dalam menuliskan sebuah kode, maka <em>text editor&nbsp;</em>ini cocok untuk dicoba. Emacs memiliki fitur yang tidak disangka-sangka untuk sebuah <em>text editor</em>, seperti <em>news reader</em>, kalkulator, dan fitur untuk enkripsi/dekripsi <em>file</em>. Emacs tersedia untuk Windows, Macs, maupun Linux secara gratis. Untuk mencobanya, kalian bisa mengunjungi halaman website berikut: <a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noreferrer noopener">https://www.gnu.org/software/emacs/</a></p>
+            <p><h4>Browser</h4></p>
+            <p dir="ltr">Seperti yang sudah kita ketahui, untuk mengakses website membutuhkan sebuah browser. Tentu untuk mengembangkan website juga diperlukan sebuah browser untuk melihat seperti apa tampak website yang sedang kita kembangkan. Kita bisa menggunakan browser apa pun untuk mengunjungi sebuah website, tetapi hasil yang ditampilkan mungkin dapat berbeda pada di setiap browser. Walaupun tampilan pada setiap browser berbeda, kalian tidak perlu mencobanya satu per satu untuk melihatnya pada masing-masing browser. Kami sarankan Anda menggunakan browser yang populer yaitu Google Chrome atau Mozilla Firefox.&nbsp;</p>
+            <p dir="ltr">Seperti text editor, sebenarnya sistem operasi sudah mempunyai browser usungannya masing-masing, seperti <a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noreferrer noopener">Microsoft Edge</a> di Windows dan <a href="https://www.apple.com/id/safari/" target="_blank" rel="noreferrer noopener">Safari</a> di MacOS.</p>
+            <p dir="ltr"><em>Developer Tools</em> atau <em>Dev Tools</em> merupakan alat yang dapat digunakan untuk melakukan debugging pada sebuah website. Dev Tools ini merupakan tools yang andal dalam mencari suatu <em>bugs</em> dan memperbaikinya. Bahkan kita dapat mensimulasikan tampilan website pada sebuah layar <em>smartphone</em>, sehingga tak perlu repot-repot memakai <em>smartphone</em> untuk melihat responsibilitas website yang kita kembangkan.</p>
+            <p dir="ltr">Untuk yang sudah menginstal Google Chrome atau Mozilla Firefox, artinya kalian siap untuk menuju sub-modul selanjutnya. Jika belum, kalian bisa mengunduhnya pada website berikut:<br><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noreferrer noopener">Halaman unduh Mozilla Firefox</a>.<a href="https://www.google.com/intl/id_id/chrome/"></a><a href="https://www.google.com/intl/id_id/chrome/"></a><br><a href="https://www.google.com/intl/id_id/chrome/" target="_blank" rel="noreferrer noopener">Halaman unduh Google Chrome</a>.</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="before">
+            <a href="modulfed2(1).html"class="steps-link gc-analytics-event"  data-action="Previous step" >  
+              <div class="steps-link-direction">Previous</div>
+            </a>
+          </div>
+        <div class="next">
+          <a href="subscription.html" class="steps-link gc-analytics-event"  data-action="Next step" >
+              
+              <div class="steps-link-direction">Next</div>
+            </a>
+          </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- modul course section starts  -->
+    
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- droppdown js link  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
